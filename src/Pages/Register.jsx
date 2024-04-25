@@ -114,7 +114,7 @@ const Register = () => {
 
 
                         {/* Form */}
-                        <div className="md:max-w-md w-full border-2 sm:px-6 p-4 rounded-lg">
+                        <div className="md:max-w-md w-full dark:bg-white border-2 sm:px-6 p-4 rounded-lg">
                             <form onSubmit={handleSubmit(handleRegisterForm)}>
                                 <div className="my-6 text-center">
                                     <h3 className="text-3xl font-extrabold">Register</h3>
