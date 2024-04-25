@@ -59,7 +59,7 @@ const Navbar = () => {
 
                 <details className="dropdown">
                     <summary className="m-1 btn bg-transparent border-none hover:bg-transparent lg:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-green-50 font-bold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 font-bold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </summary>
                     <ul className="p-2 shadow dropdown-content z-50 bg-base-100 rounded-box w-52 space-y-2">
                     {

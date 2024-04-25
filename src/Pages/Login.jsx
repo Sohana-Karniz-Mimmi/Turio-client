@@ -113,7 +113,7 @@ const Login = () => {
                         <div className="md:max-w-md w-full border-2 sm:px-6 p-4 rounded-lg">
                             <form onSubmit={handleSubmit(handleLoginForm)}>
                                 <div className="my-6 text-center">
-                                    <h3 className="text-3xl font-extrabold">Sign in</h3>
+                                    <h3 className="text-3xl font-extrabold">Login</h3>
                                 </div>
                                 <div>
                                     <label className="text-sm block mb-2">Email</label>
