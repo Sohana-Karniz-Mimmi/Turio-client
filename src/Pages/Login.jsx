@@ -101,9 +101,8 @@ const Login = () => {
     return (
         <>
             <Helmet>
-                <title>Sing in - Dream Home</title>
+                <title>Sing in - Master Tourist</title>
             </Helmet>
-            <Navbar></Navbar>
             <div className="font-[sans-serif] text-[#333]">
                 <div className=" flex flex-col items-center justify-center">
                     <div className="mx-auto md:w-[448px] w-full p-4">
@@ -111,7 +110,7 @@ const Login = () => {
 
 
                         {/* Form */}
-                        <div className="md:max-w-md w-full bg-white sm:px-6 p-4 rounded-lg">
+                        <div className="md:max-w-md w-full border-2 sm:px-6 p-4 rounded-lg">
                             <form onSubmit={handleSubmit(handleLoginForm)}>
                                 <div className="my-6 text-center">
                                     <h3 className="text-3xl font-extrabold">Sign in</h3>
@@ -155,12 +154,6 @@ const Login = () => {
                                     </div>
                                 </div>
                                 <div className="flex items-center justify-between gap-2 mt-5">
-                                    {/* <div className="flex items-center">
-                                        <input id="remember-me" name="remember-me" type="checkbox" className=" h-4 w-4 shrink-0 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" />
-                                        <label className="ml-3 block text-sm">
-                                            Remember me
-                                        </label>
-                                    </div> */}
                                     <div>
                                         <a href="jajvascript:void(0);" className="text-blue-600 font-semibold text-sm hover:underline">
                                             Forgot Password?
@@ -178,7 +171,7 @@ const Login = () => {
                                 </div>
 
                                 <div className="">
-                                    <p className="text-sm mt-4 ">Don't have an account <Link to={`/singUp`} className="text-blue-600 font-semibold hover:underline ml-1 whitespace-nowrap">Sing Up</Link></p>
+                                    <p className="text-sm mt-4 ">Don't have an account <Link to={`/singUp`} className="text-blue-600 font-semibold hover:underline ml-1 whitespace-nowrap">Register</Link></p>
                                 </div>
                                 <p className="mb-8 mt-6 text-sm text-gray-400 text-center">or continue with</p>
 

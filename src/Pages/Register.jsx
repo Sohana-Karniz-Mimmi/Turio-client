@@ -1,12 +1,11 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import Navbar from "../Components/Navbar";
 import { FaGithub } from "react-icons/fa6";
 import { Helmet } from "react-helmet-async";
 import { useContext, useState } from "react";
-import { AuthContext } from "../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
 import toast from 'react-hot-toast'
 import { IoEyeOffOutline } from "react-icons/io5";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 
 const Register = () => {
@@ -71,9 +70,9 @@ const Register = () => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 // The email of the user's account used.
-                const email = error.customData.email;
+                // const email = error.customData.email;
                 // The AuthCredential type that was used.
-                const credential = GoogleAuthProvider.credentialFromError(error);
+                // const credential = GoogleAuthProvider.credentialFromError(error);
                 // ...
                 console.log(errorCode);
                 console.log(errorMessage);
@@ -96,9 +95,9 @@ const Register = () => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 // The email of the user's account used.
-                const email = error.customData.email;
+                // const email = error.customData.email;
                 // The AuthCredential type that was used.
-                const credential = GoogleAuthProvider.credentialFromError(error);
+                // const credential = GoogleAuthProvider.credentialFromError(error);
                 // ...
                 console.log(errorCode);
                 console.log(errorMessage);
@@ -110,9 +109,8 @@ const Register = () => {
     return (
         <>
             <Helmet>
-                <title>Sing Up - Dream Home</title>
+                <title>Sing Up - Master Tourist</title>
             </Helmet>
-            <Navbar></Navbar>
             <div className="font-[sans-serif] text-[#333]">
                 <div className=" flex flex-col items-center justify-center">
                     <div className="mx-auto md:w-[448px] w-full p-4">
@@ -120,10 +118,10 @@ const Register = () => {
 
 
                         {/* Form */}
-                        <div className="md:max-w-md w-full bg-white sm:px-6 p-4 rounded-lg">
+                        <div className="md:max-w-md w-full border-2 sm:px-6 p-4 rounded-lg">
                             <form onSubmit={handleSubmit(handleRegisterForm)}>
                                 <div className="my-6 text-center">
-                                    <h3 className="text-3xl font-extrabold">Sign Up</h3>
+                                    <h3 className="text-3xl font-extrabold">Register</h3>
                                 </div>
 
                                 <div>
@@ -194,7 +192,7 @@ const Register = () => {
                                 </div>
 
                                 <div className="">
-                                    <p className="text-sm mt-4 ">Don't have an account <Link to={`/login`} className="text-blue-600 font-semibold hover:underline ml-1 whitespace-nowrap">Sing in</Link></p>
+                                    <p className="text-sm mt-4 ">Don't have an account <Link to={`/login`} className="text-blue-600 font-semibold hover:underline ml-1 whitespace-nowrap">Login</Link></p>
                                 </div>
                                 <p className="mb-8 mt-6 text-sm text-gray-400 text-center">or continue with</p>
                                 <div className="space-x-8 mb-6 flex justify-center">
