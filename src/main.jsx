@@ -6,7 +6,11 @@ import router from './Root/Root';
 import AuthProvider from './AuthProvider/AuthProvider';
 import { HelmetProvider } from 'react-helmet-async'
 import toast, { Toaster } from 'react-hot-toast';
-
+// AOS
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
