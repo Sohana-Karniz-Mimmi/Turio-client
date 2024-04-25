@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import './navbar.css'
 // import logo from "../assets/logo3.svg"
 
 const Navbar = () => {
@@ -92,17 +93,31 @@ const Navbar = () => {
                 </div>
                 {
                     user ? <>
-                        <div className="btn btn-ghost btn-circle avatar tooltip hover:tooltip-open tooltip-left text-white" data-tip={user.displayName}>
-                            <div className=" w-12 rounded-full ">
-                                <img alt={"User"} src={user.photoURL} />
-                            </div>
-                        </div>
-                        <Link to={`/`} onClick={handleLogoutBtn} className="ml-3 md:mr-2 relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md">
-                            <span className="w-full h-full bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05] absolute"></span>
-                            <span className="relative md:px-6 md:py-3 px-3 py-2 transition-all ease-out bg-[#141414] rounded-md group-hover:bg-opacity-0 duration-400">
-                                <span className="relative text-white md:text-[16px] text-sm">Log Out</span>
-                            </span>
-                        </Link>
+
+
+                        <ul className="mainMenuItem relative">
+                            <li>
+                                <div className="btn btn-ghost btn-circle avatar text-white">
+                                    <div className=" w-12 rounded-full ">
+                                        <img alt={"User"} src={user.photoURL} />
+                                    </div>
+                                </div>
+
+                                <ul className="subMenuItem absolute bg-white right-[-40px] p-4 z-10 w-[150px] border-t-2 border-[#ddd]">
+                                    <li>
+                                        <a className="">{user.displayName}</a> 
+                                    </li>
+                                    <Link to={`/`} onClick={handleLogoutBtn} className="w-full mt-2 relative inline-flex items-center justify-center font-bold overflow-hidden group rounded-md">
+                                        <span className="w-full h-full bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05] absolute"></span>
+                                        <span className="relative md:px-3 md:py-1.5 px-3 py-1.5 transition-all ease-out rounded-md group-hover:bg-opacity-0 duration-400">
+                                            <span className="relative text-white md:text-[16px] text-sm">Log Out</span>
+                                        </span>
+                                    </Link>
+                                </ul>
+
+                            </li>
+                        </ul>
+
                     </>
                         :
                         <>
