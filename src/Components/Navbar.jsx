@@ -14,24 +14,27 @@ const Navbar = () => {
             isActive ? 'p-0 pb-1 rounded-none text-[16px] border-b-2 font-bold mt-2 border-[#ff5478]' : 'font-bold p-0 hover:pb-1 hover:rounded-none text-[16px] hover:border-b-2 border-[#ff5478] mt-2'
         } to={'/'}> Home </NavLink> </li>
 
-        {/* {user && <> */}
         <li> <NavLink className={({ isActive }) =>
             isActive ? 'p-0 pb-1 rounded-none text-[16px] border-b-2 font-bold mt-2 border-[#ff5478]'
                 :
                 'font-bold p-0 hover:pb-1 hover:rounded-none text-[16px] hover:border-b-2 mt-2 border-[#ff5478]'
         } to={'/allTourists'}>All Tourists Spot </NavLink> </li>
+        
+        {user && <>
+
         <li> <NavLink className={({ isActive }) =>
             isActive ? 'p-0 pb-1 rounded-none text-[16px] border-b-2 font-bold mt-2 border-[#ff5478]'
                 :
                 'font-bold p-0 hover:pb-1 hover:rounded-none text-[16px] hover:border-b-2 mt-2 border-[#ff5478]'
         } to={'/addTourists'}> Add Tourists Spot </NavLink> </li>
+
         <li> <NavLink className={({ isActive }) =>
             isActive ? 'p-0 pb-1 rounded-none text-[16px] border-b-2 font-bold mt-2 border-[#ff5478]'
                 :
                 'font-bold p-0 hover:pb-1 hover:rounded-none text-[16px] hover:border-b-2 mt-2 border-[#ff5478]'
         } to={'/myList'}> My List </NavLink> </li>
 
-        {/* </>} */}
+        </>}
 
 
         {/* <li> <NavLink className={({ isActive }) =>

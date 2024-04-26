@@ -1,132 +1,151 @@
+import Swal from 'sweetalert2'
+import { useForm } from "react-hook-form";
+import { useContext } from 'react';
+import { AuthContext } from '../AuthProvider/AuthProvider';
+
 const AddTourists = () => {
 
-    const handleAddProduct = (e) => {
-        e.preventDefault(); 
+    // React Hook Form
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm()
+
+    const { user } = useContext(AuthContext);
+    const email = user.email
+    const displayName = user.displayName
+
+    const handleSubmitForm = data => {
+        // data.preventDefault();
+        const { touristsSpotName, countryName, averageCost, description, location, travelTime, totalVisitors, seasonality, photo } = data
+
+    const touristSport = { touristsSpotName, countryName, averageCost, description, location, travelTime, totalVisitors, seasonality, photo, email, displayName}
+    // console.log(touristSport);
+
+
+        fetch(`http://localhost:5000/tourists`, {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(touristSport)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: "Tourist Sport Added Successfully",
+                        icon: "success"
+                    });
+                }
+                console.log('inside post response data', data);
+            })
+
+
     }
 
     return (
         <div>
-            <div className="gadgetContainer pt-10">
-                <div className="shadow-lg p-5 border md:w-[900px] w-full mx-auto  ">
-                    {/* Heading */}
-                    <div className="mt-5 mb-8">
-                        <p className="text-center text-3xl font-semibold">
-                            <span className="mr-3 text-[#FF497C]">
-                                <i className="bx bxs-alarm-add"></i>
-                            </span>
-                            <span className="">
-                                <span className="text-[#FF497C]">
-                                    {/* {update ? "Update " : "Add "} */}
-                                </span>
-                                Add Tourists Spot
-                            </span>
-                        </p>
-                    </div>
-                    {/* form */}
-                    <form onSubmit={handleAddProduct}>
-                        <div className="flex gap-8 ">
-                            <div className="flex-1">
-                                <label className="block mb-2 dark:text-white" htmlFor="name">
-                                    Name
-                                </label>
-                                <input
-                                    className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
-                                    type="text"
-                                    placeholder="Name"
-                                    id="name"
-                                    name="name"
-                                />
+            <section className="p-6 dark:text-gray-900">
 
-                                <label
-                                    className="block mt-4 mb-2 dark:text-white"
-                                    htmlFor="brand"
-                                >
-                                    Brand Name
-                                </label>
-                                <select
-                                    name="brand"
-                                    id="brand"
-                                    className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
-                                    type="text"
-                                    placeholder="Select Brand"
-                                >
-                                    <option value="Test" selected>
-                                        Test
-                                    </option>
-                                    <option value="Test2" selected>
-                                        Test2
-                                    </option>
-                                    <option value="Test3" selected>
-                                        Test3
-                                    </option>
-                                </select>
+                <form onSubmit={handleSubmit(handleSubmitForm)} className="container mx-auto flex justify-center space-y-12">
+                    <fieldset className=" py-10 md:px-16 px-5 rounded-md shadow-sm dark:bg-white border-2 mt-5">
+                        <div className="mb-6 text-center">
+                            <h3 className="md:text-3xl text-2xl font-extrabold">Add Tourists Spot</h3>
+                        </div>
+                        <div className=" md:w-[680px] w-full grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
+                            {/* First Row  */}
+                            <div className="col-span-full sm:col-span-3">
+                                <label className="text-sm block mb-2">Tourists Spot Name</label>
+                                <div className="relative">
+                                    <input {...register("touristsSpotName", { required: true })} name="touristsSpotName" type="text" className="w-full text-sm border rounded-lg border-gray-300 focus:border-[#333] px-2 py-2 outline-none bg-transparent" placeholder="Enter Your Photo URL" />
+                                    {errors.touristsSpotName && <span className="text-red-600">Please Enter Your Photo URL</span>}
 
-                                <label
-                                    className="block mt-4 mb-2 dark:text-white"
-                                    htmlFor="price"
-                                >
-                                    Price
-                                </label>
-                                <input
-                                    className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
-                                    type="text"
-                                    placeholder="Enter Price"
-                                    id="Price"
-                                    name="price"
-                                />
+                                </div>
                             </div>
-                            {/* Right side */}
-                            <div className="flex-1">
-                                <label className="block mb-2 dark:text-white" htmlFor="image">
-                                    Image
-                                </label>
-                                <input
-                                    className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
-                                    type="text"
-                                    placeholder="Enter Image URL"
-                                    id="image"
-                                    name="image"
-                                />
-                                <label className="block mb-2 mt-4 dark:text-white" htmlFor="type">
-                                    Type
-                                </label>
-                                <input
-                                    className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
-                                    type="text"
-                                    placeholder="Enter type"
-                                    id="type"
-                                    name="type"
-                                />
+                            <div className="col-span-full sm:col-span-3">
+                                <label className="text-sm block mb-2">Country Name</label>
+                                <div className="relative">
+                                    <input {...register("countryName", { required: true })} name="countryName" type="text" className="w-full text-sm border rounded-lg border-gray-300 focus:border-[#333] px-2 py-2 outline-none bg-transparent" placeholder="Enter Your Photo URL" />
+                                    {errors.countryName && <span className="text-red-600">Please Enter Your Photo URL</span>}
 
-                                <label
-                                    className="block mt-4 mb-2 dark:text-white"
-                                    htmlFor="rating"
-                                >
-                                    Rating
-                                </label>
-                                <input
-                                    className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
-                                    maxLength={5}
-                                    max={5}
-                                    min={0}
-                                    type="number"
-                                    placeholder="Enter Rating"
-                                    id="rating"
-                                    name="rating"
-                                />
+                                </div>
+                            </div>
+
+                            {/* 2nd Row  */}
+                            <div className="col-span-full sm:col-span-3">
+                                <label className="text-sm block mb-2">Location</label>
+                                <div className="relative">
+                                    <input {...register("location", { required: true })} name="location" type="text" className="w-full text-sm border rounded-lg border-gray-300 focus:border-[#333] px-2 py-2 outline-none bg-transparent" placeholder="Enter Your Photo URL" />
+                                    {errors.location && <span className="text-red-600">Please Enter Your Photo URL</span>}
+
+                                </div>
+                            </div>
+                            <div className="col-span-full sm:col-span-3">
+                                <label className="text-sm block mb-2">Description</label>
+                                <div className="relative">
+                                    <input {...register("description", { required: true })} name="description" type="text" className="w-full text-sm border rounded-lg border-gray-300 focus:border-[#333] px-2 py-2 outline-none bg-transparent" placeholder="Enter Your Photo URL" />
+                                    {errors.description && <span className="text-red-600">Please Enter Your Photo URL</span>}
+
+                                </div>
+                            </div>
+
+                            {/* 3rd Row  */}
+                            
+                            <div className="col-span-full sm:col-span-3">
+                                <label className="text-sm block mb-2">Average Cost</label>
+                                <div className="relative">
+                                    <input {...register("averageCost", { required: true })} name="averageCost" type="text" className="w-full text-sm border rounded-lg border-gray-300 focus:border-[#333] px-2 py-2 outline-none bg-transparent" placeholder="Enter Your Photo URL" />
+                                    {errors.averageCost && <span className="text-red-600">Please Enter Your Photo URL</span>}
+
+                                </div>
+                            </div>
+                            <div className="col-span-full sm:col-span-3">
+                                <label className="text-sm block mb-2">Seasonality</label>
+                                <div className="relative">
+                                    <input {...register("seasonality", { required: true })} name="seasonality" type="text" className="w-full text-sm border rounded-lg border-gray-300 focus:border-[#333] px-2 py-2 outline-none bg-transparent" placeholder="Enter Your Photo URL" />
+                                    {errors.seasonality && <span className="text-red-600">Please Enter Your Photo URL</span>}
+
+                                </div>
+                            </div>
+
+                            {/* last Row  */}
+                            <div className="col-span-full sm:col-span-3">
+                                <label className="text-sm block mb-2">Travel Time</label>
+                                <div className="travelTime">
+                                    <input {...register("travelTime", { required: true })} name="travelTime" type="text" className="w-full text-sm border rounded-lg border-gray-300 focus:border-[#333] px-2 py-2 outline-none bg-transparent" placeholder="Enter Your Photo URL" />
+                                    {errors.travelTime && <span className="text-red-600">Please Enter Your Photo URL</span>}
+
+                                </div>
+                            </div>
+                            <div className="col-span-full sm:col-span-3">
+                                <label className="text-sm block mb-2">Total Visitors Per Year</label>
+                                <div className="relative">
+                                    <input {...register("totalVisitors", { required: true })} name="totalVisitors" type="text" className="w-full text-sm border rounded-lg border-gray-300 focus:border-[#333] px-2 py-2 outline-none bg-transparent" placeholder="Enter Your Photo URL" />
+                                    {errors.totalVisitors && <span className="text-red-600">Please Enter Your Photo URL</span>}
+
+                                </div>
+                            </div>
+
+                            {/* photo */}
+                            <div className="col-span-full">
+                                <label className="text-sm block mb-2">Photo URL</label>
+                                <div className="relative">
+                                    <input {...register("photo", { required: true })} name="photo" type="text" className="w-full text-sm border rounded-lg border-gray-300 focus:border-[#333] px-2 py-2 outline-none bg-transparent" placeholder="Enter Your Photo URL" />
+                                    {errors.photo && <span className="text-red-600">Please Enter Your Photo URL</span>}
+
+                                </div>
+                            </div>
+                            {/* Btn */}
+                            <div className="col-span-full">
+                                <input type="submit" value='Add Tourists Spot' className="w-full p-2 rounded-md btn bg-[#ff5478] text-white" />
                             </div>
                         </div>
-
-                        <input
-                            className="px-4 w-full py-2 mt-4 rounded hover:bg-[#ab3154]  bg-[#FF497C] duration-200 text-white cursor-pointer font-semibold"
-                            type="submit"
-                            value="Add Product"
-                        />
-                    </form>
-                </div>
-            </div>
+                    </fieldset>
+                </form>
+            </section>
         </div>
     );
 };
+
 
 export default AddTourists;
