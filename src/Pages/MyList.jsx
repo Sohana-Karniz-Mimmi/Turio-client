@@ -70,7 +70,7 @@ const Users = () => {
                             <td>{tourist.location}</td>
                             <td>
                                 <div className=" space-x-1">
-                                <Link to={`/updateCoffee/${tourist._id}`} className="py-2 px-4 rounded-md join-item text-white bg-green-500">Update</Link>
+                                <Link to={`/update/${tourist._id}`} className="py-2 px-4 rounded-md join-item text-white bg-green-500">Update</Link>
                                 <button onClick={() => handleDelete(tourist._id)} className="py-2 px-4 rounded-md join-item text-white bg-red-500">Delete</button>
                             </div></td>
                         </tr>)

@@ -8,6 +8,7 @@ import MyList from "../Pages/MyList";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import PrivetRoute from "../PrivetRoute/PrivetRoute";
+import Update from "../Pages/Update";
 
 const router = createBrowserRouter([
     {
@@ -32,7 +33,11 @@ const router = createBrowserRouter([
                 path: "/myList",
                 element: <PrivetRoute><MyList></MyList></PrivetRoute>,
                 loader: () => fetch(`http://localhost:5000/tourists`)
-                // loader: ({ params }) => fetch(`https://coffee-store-server-one-roan.vercel.app/coffee/${params.id}`)
+            },
+            {
+                path: "/update/:id",
+                element: <PrivetRoute><Update></Update></PrivetRoute>,
+                loader: ({ params }) => fetch(`http://localhost:5000/single-tourists/${params.id}`)
             },
             {
                 path: "/login",
