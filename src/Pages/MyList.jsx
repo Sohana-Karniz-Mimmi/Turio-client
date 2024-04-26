@@ -1,49 +1,51 @@
-// import { useState } from "react";
-// import { useLoaderData } from "react-router-dom";
-// import Swal from 'sweetalert2';
+import { useContext, useEffect, useState } from "react";
+import { useLoaderData } from "react-router-dom";
+import Swal from 'sweetalert2';
 
 import { Link } from "react-router-dom";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Users = () => {
 
-    // const loadedUsers = useLoaderData()
-    // console.log(loadedUsers);
-    // const [users, setUsers] = useState(loadedUsers);
+    const loadedTouristList = useLoaderData()
+    const { user } = useContext(AuthContext);
+    const remainingTouristList = loadedTouristList.filter(touristItem => touristItem.email == user.email)
+    const [touristList, setTouristList] = useState(remainingTouristList);
 
-    // const handleDelete = id => {
-    //     console.log(id);
-    //     Swal.fire({
-    //         title: "Are you sure?",
-    //         text: "You won't be able to revert this!",
-    //         icon: "warning",
-    //         showCancelButton: true,
-    //         confirmButtonColor: "#3085d6",
-    //         cancelButtonColor: "#d33",
-    //         confirmButtonText: "Yes, delete it!"
-    //     })
-    //         .then((result) => {
-    //             if (result.isConfirmed) {
-    //                 fetch(`https://coffee-store-server-one-roan.vercel.app/users/${id}`, {
-    //                     method: 'DELETE',
-    //                 })
-    //                     .then(res => res.json())
-    //                     .then(data => {
-    //                         console.log(data);
-    //                         if (data.deletedCount > 0) {
-    //                             Swal.fire({
-    //                                 title: "Deleted!",
-    //                                 text: "Your file has been deleted.",
-    //                                 icon: "success"
-    //                             });
+    const handleDelete = id => {
+        console.log(id);
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        })
+            .then((result) => {
+                if (result.isConfirmed) {
+                    fetch(`http://localhost:5000/tourists/${id}`, {
+                        method: 'DELETE',
+                    })
+                        .then(res => res.json())
+                        .then(data => {
+                            console.log(data);
+                            if (data.deletedCount > 0) {
+                                Swal.fire({
+                                    title: "Deleted!",
+                                    text: "Your file has been deleted.",
+                                    icon: "success"
+                                });
 
-    //                             const remaining = users.filter(userId => userId._id !== id)
-    //                             setUsers(remaining);
-    //                         }
-    //                     })
-    //             }
-    //         })
+                                const remaining = touristList.filter(touristEmail => touristEmail._id !== id)
+                                setTouristList(remaining);
+                            }
+                        })
+                }
+            })
 
-    // }
+    }
 
     return (
         <div className="w-[900px] py-10 mx-auto border border-1 rounded-lg mt-10">
@@ -61,40 +63,19 @@ const Users = () => {
                     </thead>
                     <tbody className="text-center">
                         {/* row 1 */}
-                        {/* {
-                            users.map((user, indx) => <tr key={user._id}>
-                                <t>{indx + 1}</t>
-                                <td>{user.email}</td>
-                                <td>{user.creationTime}</td>
-                                <td>{user.lastLogin}</td>
-                                <td><button onClick={() => handleDelete(user._id)} className="btn join-item text-white bg-red-500">X</button></td>
-                            </tr>)
-                        } */}
+                        {
+                            touristList.map((tourist) => <tr key={tourist._id} className="">
+                            <th>{tourist.touristsSpotName}</th>
+                            <td>{tourist.countryName}</td>
+                            <td>{tourist.location}</td>
+                            <td>
+                                <div className=" space-x-1">
+                                <Link to={`/updateCoffee/${tourist._id}`} className="py-2 px-4 rounded-md join-item text-white bg-green-500">Update</Link>
+                                <button onClick={() => handleDelete(tourist._id)} className="py-2 px-4 rounded-md join-item text-white bg-red-500">Delete</button>
+                            </div></td>
+                        </tr>)
+                        }
 
-                        <tr className="">
-                            <th>1</th>
-                            <td>Cy Ganderton</td>
-                            <td>Quality Control Specialist</td>
-                            <td>
-                                <div className=" space-x-1">
-                                <button className="py-2 px-4 rounded-md join-item text-white bg-green-500">Update</button>
-                                <button className="py-2 px-4 rounded-md join-item text-white bg-red-500">Delete</button>
-                                {/* <Link to={`/updateCoffee/${_id}`} className="btn join-item">Edit</Link>
-                                <button onClick={() => handleDelete(_id)} className="btn join-item text-white bg-red-500">X</button> */}
-                            </div></td>
-                        </tr>
-                        <tr className="">
-                            <th>1</th>
-                            <td>Cy Ganderton</td>
-                            <td>Quality Control Specialist</td>
-                            <td>
-                                <div className=" space-x-1">
-                                <button className="py-2 px-4 rounded-md join-item text-white bg-green-500">Update</button>
-                                <button className="py-2 px-4 rounded-md join-item text-white bg-red-500">Delete</button>
-                                {/* <Link to={`/updateCoffee/${_id}`} className="btn join-item">Edit</Link>
-                                <button onClick={() => handleDelete(_id)} className="btn join-item text-white bg-red-500">X</button> */}
-                            </div></td>
-                        </tr>
                     </tbody>
                 </table>
             </div>

@@ -11,36 +11,39 @@ import PrivetRoute from "../PrivetRoute/PrivetRoute";
 
 const router = createBrowserRouter([
     {
-      path: "/",
-      element: <MainLayout></MainLayout>,
-      errorElement: <ErrorPage></ErrorPage>,
-      children: [
-        {
-            path: "/",
-            element: <Home></Home>
-        },
-        {
-            path: "/allTourists",
-            element: <AllTourists></AllTourists>
-        },
-        {
-            path: "/addTourists",
-            element: <PrivetRoute><AddTourists></AddTourists></PrivetRoute>
-        },
-        {
-            path: "/myList",
-            element: <PrivetRoute><MyList></MyList></PrivetRoute>
-        },
-        {
-            path: "/login",
-            element: <Login></Login>
-        },
-        {
-            path: "/register",
-            element: <Register></Register>
-        },
-      ]
+        path: "/",
+        element: <MainLayout></MainLayout>,
+        errorElement: <ErrorPage></ErrorPage>,
+        children: [
+            {
+                path: "/",
+                element: <Home></Home>
+            },
+            {
+                path: "/allTourists",
+                element: <AllTourists></AllTourists>,
+                loader: () => fetch(`http://localhost:5000/tourists`)
+            },
+            {
+                path: "/addTourists",
+                element: <PrivetRoute><AddTourists></AddTourists></PrivetRoute>
+            },
+            {
+                path: "/myList",
+                element: <PrivetRoute><MyList></MyList></PrivetRoute>,
+                loader: () => fetch(`http://localhost:5000/tourists`)
+                // loader: ({ params }) => fetch(`https://coffee-store-server-one-roan.vercel.app/coffee/${params.id}`)
+            },
+            {
+                path: "/login",
+                element: <Login></Login>
+            },
+            {
+                path: "/register",
+                element: <Register></Register>
+            },
+        ]
     },
-  ]);
+]);
 
-  export default router;
+export default router;
