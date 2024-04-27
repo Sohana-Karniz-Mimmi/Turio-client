@@ -103,11 +103,16 @@ const Login = () => {
             <Helmet>
                 <title>Sing in - Master Tourist</title>
             </Helmet>
+
+            <div>
+            <Navbar></Navbar>
+            </div>
+
             <div className="font-[sans-serif] text-[#333]">
                 <div className=" flex flex-col items-center justify-center">
                     <div className="mx-auto md:w-[448px] w-full p-4">
 
-
+                    
 
                         {/* Form */}
                         <div className="md:max-w-md w-full dark:bg-white border-2 sm:px-6 p-4 rounded-lg">
@@ -171,7 +176,7 @@ const Login = () => {
                                 </div>
 
                                 <div className="">
-                                    <p className="text-sm mt-4 ">Don't have an account <Link to={`/singUp`} className="text-blue-600 font-semibold hover:underline ml-1 whitespace-nowrap">Register</Link></p>
+                                    <p className="text-sm mt-4 ">Don't have an account <Link to={`/register`} className="text-blue-600 font-semibold hover:underline ml-1 whitespace-nowrap">Register</Link></p>
                                 </div>
                                 <p className="mb-8 mt-6 text-sm text-gray-400 text-center">or continue with</p>
 

@@ -4,6 +4,7 @@ import Swal from 'sweetalert2';
 
 import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import Navbar from "../Components/Navbar";
 
 const Users = () => {
 
@@ -48,38 +49,47 @@ const Users = () => {
     }
 
     return (
-        <div className="w-[900px] py-10 mx-auto border border-1 rounded-lg mt-10">
-            <h2 className="text-2xl font-bold text-center pb-5">My List</h2>
-            <div className="overflow-x-auto">
-                <table className="table">
-                    {/* head */}
-                    <thead className="text-center bg-gray-200 text-black">
-                        <tr>
-                            <th>Name</th>
-                            <th>Country</th>
-                            <th>Location</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody className="text-center">
-                        {/* row 1 */}
-                        {
-                            touristList.map((tourist) => <tr key={tourist._id} className="">
-                            <th>{tourist.touristsSpotName}</th>
-                            <td>{tourist.countryName}</td>
-                            <td>{tourist.location}</td>
-                            <td>
-                                <div className=" space-x-1">
-                                <Link to={`/update/${tourist._id}`} className="py-2 px-4 rounded-md join-item text-white bg-green-500">Update</Link>
-                                <button onClick={() => handleDelete(tourist._id)} className="py-2 px-4 rounded-md join-item text-white bg-red-500">Delete</button>
-                            </div></td>
-                        </tr>)
-                        }
 
-                    </tbody>
-                </table>
+        <>
+            <div>
+                <Navbar></Navbar>
             </div>
-        </div>
+
+            <div className="w-[900px] py-10 mx-auto border border-1 rounded-lg mt-10">
+                <h2 className="text-2xl font-bold text-center pb-5">My List</h2>
+                <div className="overflow-x-auto">
+                    <table className="table">
+                        {/* head */}
+                        <thead className="text-center bg-gray-200 text-black">
+                            <tr>
+                                <th>Name</th>
+                                <th>Country</th>
+                                <th>Location</th>
+                                <th>Cost</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody className="text-center">
+                            {/* row 1 */}
+                            {
+                                touristList.map((tourist) => <tr key={tourist._id} className="">
+                                    <th>{tourist.touristsSpotName}</th>
+                                    <td>{tourist.countryName}</td>
+                                    <td>{tourist.location}</td>
+                                    <td>{tourist.averageCost}</td>
+                                    <td>
+                                        <div className=" space-x-1">
+                                            <Link to={`/update/${tourist._id}`} className="py-2 px-4 rounded-md join-item text-white bg-green-500">Update</Link>
+                                            <button onClick={() => handleDelete(tourist._id)} className="py-2 px-4 rounded-md join-item text-white bg-red-500">Delete</button>
+                                        </div></td>
+                                </tr>)
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </>
     );
 };
 

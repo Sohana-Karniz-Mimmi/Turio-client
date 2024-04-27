@@ -1,7 +1,6 @@
 import slider1 from '../assets/images/Banner Slider/banner1.png'
-import slider2 from '../assets/images/Banner Slider/slider2.jpg'
+import slider2 from '../assets/images/Banner Slider/banner2.png'
 import slider3 from '../assets/images/Banner Slider/slider3.jpg'
-import slider4 from '../assets/images/Banner Slider/slider4.jpg'
 import Navbar from './Navbar';
 
 // Swiper
@@ -47,7 +46,7 @@ const Banner = () => {
                                 <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700" className="mt-4 mb-10 max-w-3xl sm:text-lg/relaxed">
                                 Sed convallis sit amet leo quis feugiat. Nunc interdum mollis facilisis. feugi Dthreec id the urna aliquet, suscipit turpis ut Dthreec id urna aliquet, suscipit turpis ut, facilisis purus.
                                 </p>
-                                <button className='border border-green-600 py-[9px] bg-green-600 transition duration-300 ease-in-out hover:bg-transparent px-6 hover:text-green-600 font-semibold'> Explore Now </button>
+                                <button className='border border-green-600 py-[9px] bg-green-600 hover:bg-transparent px-6 hover:text-green-600 font-semibold'> Explore Now </button>
                             </div>
                         </div>
                     </div>
@@ -55,7 +54,7 @@ const Banner = () => {
                 </section>
             </SwiperSlide>
             <SwiperSlide>
-                <section className="relative bg-cover bg-center bg-no-repeat h-[720px]" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${slider1})` }}>
+                <section className="relative bg-cover bg-center bg-no-repeat h-[720px]" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${slider3})` }}>
 
                     <div
                         className="absolute inset-0 sm:bg-transparent  sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"
@@ -86,7 +85,7 @@ const Banner = () => {
                 </section>
             </SwiperSlide>
             <SwiperSlide>
-                <section className="relative bg-cover bg-center bg-no-repeat h-[720px]" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${slider1})` }}>
+                <section className="relative bg-cover bg-center bg-no-repeat h-[720px]" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${slider2})` }}>
 
                     <div
                         className="absolute inset-0 sm:bg-transparent  sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"

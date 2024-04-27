@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import { useState } from "react";
 import Coffee from "../Components/Coffee";
+import Navbar from "../Components/Navbar";
 
 const AllTourists = () => {
 
@@ -9,6 +10,13 @@ const AllTourists = () => {
     const [coffees, setCoffees] = useState(loadedCoffee)
 
     return (
+
+        <>
+
+        <div>
+        <Navbar></Navbar>
+        </div>
+
         <div className=" container mx-auto">
             <div>
                 <h2 className="text-2xl font-bold text-center py-5">Total Coffee {loadedCoffee.length}</h2>
@@ -25,6 +33,8 @@ const AllTourists = () => {
                 }
             </div>
         </div>
+        </>
+
     );
 };
 

@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useContext } from 'react';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import { useLoaderData } from 'react-router-dom';
+import Navbar from '../Components/Navbar';
 
 const Update = () => {
 
@@ -16,7 +17,7 @@ const Update = () => {
     const loadedUpdateData = useLoaderData()
     // console.log(loadedUpdateData);
 
-    const {_id, touristsSpotName, countryName, averageCost, description, location, travelTime, totalVisitors, seasonality, photo } = loadedUpdateData
+    const { _id, touristsSpotName, countryName, averageCost, description, location, travelTime, totalVisitors, seasonality, photo } = loadedUpdateData
 
     const { user } = useContext(AuthContext);
     const email = user.email
@@ -40,7 +41,7 @@ const Update = () => {
                     Swal.fire({
                         title: "Update Successfully",
                         icon: "success"
-                      });
+                    });
                 }
                 console.log('inside post response data', data);
             })
@@ -50,6 +51,9 @@ const Update = () => {
 
     return (
         <div>
+            <div>
+                <Navbar></Navbar>
+            </div>
             <section className="p-6 dark:text-gray-900">
 
                 <form onSubmit={handleSubmit(handleUpdateForm)} className="container mx-auto flex justify-center space-y-12">

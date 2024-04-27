@@ -1,10 +1,11 @@
 import Banner from "../Components/Banner";
+import TouristsSpots from "../Components/TouristsSpots";
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <div className="p-10 mr-5 border">hlw sohana</div>
+            <TouristsSpots></TouristsSpots>
         </div>
     );
 };

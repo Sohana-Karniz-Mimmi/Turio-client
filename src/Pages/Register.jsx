@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import toast from 'react-hot-toast'
 import { IoEyeOffOutline } from "react-icons/io5";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import Navbar from "../Components/Navbar";
 
 
 const Register = () => {
@@ -120,11 +121,14 @@ const Register = () => {
             <Helmet>
                 <title>Sing Up - Master Tourist</title>
             </Helmet>
+
+            <div>
+                <Navbar></Navbar>
+            </div>
+
             <div className="font-[sans-serif] text-[#333]">
                 <div className=" flex flex-col items-center justify-center">
                     <div className="mx-auto md:w-[448px] w-full p-4">
-
-
 
                         {/* Form */}
                         <div className="md:max-w-md w-full dark:bg-white border-2 sm:px-6 p-4 rounded-lg">

@@ -2,6 +2,7 @@ import Swal from 'sweetalert2'
 import { useForm } from "react-hook-form";
 import { useContext } from 'react';
 import { AuthContext } from '../AuthProvider/AuthProvider';
+import Navbar from '../Components/Navbar';
 
 const AddTourists = () => {
 
@@ -20,8 +21,8 @@ const AddTourists = () => {
         // data.preventDefault();
         const { touristsSpotName, countryName, averageCost, description, location, travelTime, totalVisitors, seasonality, photo } = data
 
-    const touristSport = { touristsSpotName, countryName, averageCost, description, location, travelTime, totalVisitors, seasonality, photo, email, displayName}
-    // console.log(touristSport);
+        const touristSport = { touristsSpotName, countryName, averageCost, description, location, travelTime, totalVisitors, seasonality, photo, email, displayName }
+        // console.log(touristSport);
 
 
         fetch(`https://tourism-server-beta.vercel.app/tourists`, {
@@ -45,6 +46,9 @@ const AddTourists = () => {
 
     return (
         <div>
+            <div>
+                <Navbar></Navbar>
+            </div>
             <section className="p-6 dark:text-gray-900">
 
                 <form onSubmit={handleSubmit(handleSubmitForm)} className="container mx-auto flex justify-center space-y-12">
@@ -90,11 +94,11 @@ const AddTourists = () => {
                             </div>
 
                             {/* 3rd Row  */}
-                            
+
                             <div className="col-span-full sm:col-span-3">
                                 <label className="text-sm block mb-2">Average Cost</label>
                                 <div className="relative">
-                                    <input {...register("averageCost", { required: true })} name="averageCost" type="text" className="w-full text-sm border rounded-lg border-gray-300 focus:border-[#333] px-2 py-2 outline-none bg-transparent" placeholder="Enter Your Photo URL" />
+                                    <input {...register("averageCost", { required: true })} defaultValue="$" name="averageCost" type="text" className="w-full text-sm border rounded-lg border-gray-300 focus:border-[#333] px-2 py-2 outline-none bg-transparent" placeholder="Enter Your Photo URL" />
                                     {errors.averageCost && <span className="text-red-600">Please Enter Your Photo URL</span>}
 
                                 </div>
