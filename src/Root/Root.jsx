@@ -23,7 +23,7 @@ const router = createBrowserRouter([
             {
                 path: "/allTourists",
                 element: <AllTourists></AllTourists>,
-                loader: () => fetch(`http://localhost:5000/tourists`)
+                loader: () => fetch(`https://tourism-server-beta.vercel.app/tourists`)
             },
             {
                 path: "/addTourists",
@@ -32,12 +32,12 @@ const router = createBrowserRouter([
             {
                 path: "/myList",
                 element: <PrivetRoute><MyList></MyList></PrivetRoute>,
-                loader: () => fetch(`http://localhost:5000/tourists`)
+                loader: () => fetch(`https://tourism-server-beta.vercel.app/tourists`)
             },
             {
                 path: "/update/:id",
                 element: <PrivetRoute><Update></Update></PrivetRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/single-tourists/${params.id}`)
+                loader: ({ params }) => fetch(`https://tourism-server-beta.vercel.app/single-tourists/${params.id}`)
             },
             {
                 path: "/login",

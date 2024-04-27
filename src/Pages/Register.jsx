@@ -43,8 +43,21 @@ const Register = () => {
         userRegistration(email, password)
             .then(result => {
                 const user = result.user;
-                toast.success('Sing Up Successful')
                 console.log(user);
+                const users = { email, password }
+                fetch(`https://tourism-server-beta.vercel.app/users`, {
+                    method: 'POST',
+                    headers: { 'content-type': 'application/json' },
+                    body: JSON.stringify(users)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.insertedId) {
+                            toast.success('Sing Up Successful')
+
+                        }
+                    })
 
                 // Update Profile
                 profileUpdate(name, photo)

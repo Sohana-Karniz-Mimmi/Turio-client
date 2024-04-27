@@ -24,7 +24,7 @@ const AddTourists = () => {
     // console.log(touristSport);
 
 
-        fetch(`http://localhost:5000/tourists`, {
+        fetch(`https://tourism-server-beta.vercel.app/tourists`, {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(touristSport)

@@ -29,7 +29,7 @@ const Update = () => {
         // console.log(touristSport);
 
 
-        fetch(`http://localhost:5000/single-tourists/${_id}`, {
+        fetch(`https://tourism-server-beta.vercel.app/single-tourists/${_id}`, {
             method: 'PUT',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(touristSport)

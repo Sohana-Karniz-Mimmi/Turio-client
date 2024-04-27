@@ -18,7 +18,7 @@ const Coffee = ({ coffee, setCoffees, coffees }) => {
     //         confirmButtonText: "Yes, delete it!"
     //     }).then((result) => {
     //         if (result.isConfirmed) {
-    //             fetch(`http://localhost:5000/tourists/${_id}`, {
+    //             fetch(`https://tourism-server-beta.vercel.app/tourists/${_id}`, {
     //                 method: 'DELETE',
     //                 headers: { 'content-type': 'application/json' }
     //             })
