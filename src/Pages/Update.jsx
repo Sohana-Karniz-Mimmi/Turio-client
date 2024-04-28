@@ -164,7 +164,7 @@ const Update = () => {
                             </div>
                             {/* Btn */}
                             <div className="col-span-full">
-                                <input type="submit" value='Update Tourists Spot' className="w-full p-2 rounded-md btn bg-green-600 text-white" />
+                                <input type="submit" value='Update Tourists Spot' className="w-full p-2 rounded-md btn bg-green-600 hover:bg-green-600 text-white" />
                             </div>
                         </div>
                     </fieldset>

@@ -1,12 +1,9 @@
 import PropTypes from 'prop-types';
-import { Link } from "react-router-dom";
 
 import errorImage from "../../public/404.jpg"
-import { FaRegCalendarDays, FaRegClock } from 'react-icons/fa6';
-import { IoLocationOutline } from 'react-icons/io5';
 
 const CountriesCard = ({ countries }) => {
-    const { _id, touristsSpotName, countryName, averageCost, description, location, travelTime, photo } = countries;
+    const { countryName, description, photo } = countries;
     return (
         <div>
             <div className=" max-w-sm mx-auto group rounded border-2 lg::w-[365px]">
@@ -16,7 +13,7 @@ const CountriesCard = ({ countries }) => {
                 </div>
 
                 <div className="p-6 space-y-2">
-                    <h3 className="text-2xl text-center font-semibold ">{touristsSpotName}</h3>
+                    <h3 className="text-2xl text-center font-semibold ">{countryName}</h3>
                     <div className=" text-center flex justify-between items-center">
                         <p>{description}</p>
                     </div>

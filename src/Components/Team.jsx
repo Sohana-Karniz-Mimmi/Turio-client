@@ -17,8 +17,7 @@ const Team = () => {
                                 >
                                     Tour Guide
                                 </h2>
-                                <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" className="text-body-color">Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus.
-                                    Suspendissendt blandit interdum.
+                                <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" className="text-body-color">Expert guidance awaits with Turio. Discover insider tips, local secrets, and personalized recommendations for your dream travel experience.
                                 </p>
                             </div>
                         </div>
@@ -38,7 +37,7 @@ const Team = () => {
                                             <h3 className="text-dark dark:text-black text-base font-semibold">
                                                 Sohana Sheikh
                                             </h3>
-                                            <p className="text-body-color dark:text-[#909397] text-xs">Web Developer</p>
+                                            <p className="text-body-color dark:text-[#909397] text-xs">Tour Guide</p>
                                             <div>
                                                 <span className="absolute left-0 bottom-0">
                                                     <svg
@@ -226,9 +225,9 @@ const Team = () => {
                                             className="relative mx-5 overflow-hidden rounded-lg bg-white dark:bg-dark-2 py-5 px-3"
                                         >
                                             <h3 className="text-dark dark:text-black text-base font-semibold">
-                                                Glorius Cristian
+                                                Soharab Hasan
                                             </h3>
-                                            <p className="text-body-color dark:text-[#909397] text-xs">Sales Executive</p>
+                                            <p className="text-body-color dark:text-[#909397] text-xs">Tour Guide</p>
                                             <div>
                                                 <span className="absolute left-0 bottom-0">
                                                     <svg
@@ -418,7 +417,7 @@ const Team = () => {
                                             <h3 className="text-dark dark:text-black text-base font-semibold">
                                                 Jane Suttherland
                                             </h3>
-                                            <p className="text-body-color dark:text-[#909397] text-xs">Real Estate Broker</p>
+                                            <p className="text-body-color dark:text-[#909397] text-xs">Tour Guide</p>
                                             <div>
                                                 <span className="absolute left-0 bottom-0">
                                                     <svg
@@ -608,7 +607,7 @@ const Team = () => {
                                             <h3 className="text-dark dark:text-black text-base font-semibold">
                                                 Nikolas Brooten
                                             </h3>
-                                            <p className="text-body-color dark:text-[#909397] text-xs">Sales Manager</p>
+                                            <p className="text-body-color dark:text-[#909397] text-xs">Tour Guide Manager</p>
                                             <div>
                                                 <span className="absolute left-0 bottom-0">
                                                     <svg

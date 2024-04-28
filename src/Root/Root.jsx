@@ -11,6 +11,7 @@ import PrivetRoute from "../PrivetRoute/PrivetRoute";
 import Update from "../Pages/Update";
 import ViewDetails from "../Pages/ViewDetails";
 import CountriesData from "../Pages/CountriesData";
+import Form from "../Components/Form";
 
 const router = createBrowserRouter([
     {
@@ -37,6 +38,11 @@ const router = createBrowserRouter([
                 path: "/addTourists",
                 element: <PrivetRoute><AddTourists></AddTourists></PrivetRoute>
             },
+            {
+                path: "/form",
+                element: <PrivetRoute><Form></Form></PrivetRoute>
+            },
+            
             {
                 path: "/myList",
                 element: <PrivetRoute><MyList></MyList></PrivetRoute>,

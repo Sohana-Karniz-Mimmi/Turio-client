@@ -1,6 +1,6 @@
 import { Link, useLoaderData } from "react-router-dom";
-import TouristsSpotsCard from "../Components/TouristsSpotsCard";
 import Navbar from "../Components/Navbar";
+import AllTouristsSpotsCard from "../Components/AllTouristsSpotsCard";
 
 
 
@@ -22,7 +22,7 @@ const AllTourists = () => {
                 <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 ">
 
                     {
-                        loadedTouristsSpotsData.map(touristsSpot => <TouristsSpotsCard key={touristsSpot._id} touristsSpot={touristsSpot} ></TouristsSpotsCard>)
+                        loadedTouristsSpotsData.map(touristsSpot => <AllTouristsSpotsCard key={touristsSpot._id} touristsSpot={touristsSpot} ></AllTouristsSpotsCard>)
                     }
                 </div>
             </div>
