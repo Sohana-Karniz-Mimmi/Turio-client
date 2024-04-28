@@ -1,7 +1,7 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import TouristsSpotsCard from "./TouristsSpotsCard";
 
- 
+
 
 const TouristsSpots = () => {
 
@@ -19,6 +19,9 @@ const TouristsSpots = () => {
                 {
                     loadedTouristsSpotsData.map(touristsSpot => <TouristsSpotsCard key={touristsSpot._id} touristsSpot={touristsSpot} ></TouristsSpotsCard>)
                 }
+            </div>
+            <div className="text-center">
+                <Link to={`/allTourists`} className='border border-green-600 py-[9px] bg-green-600 hover:bg-transparent px-10 text-white hover:text-green-600 font-semibold rounded-full'> View All </Link>
             </div>
         </div>
     );

@@ -9,6 +9,8 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import PrivetRoute from "../PrivetRoute/PrivetRoute";
 import Update from "../Pages/Update";
+import ViewDetails from "../Pages/ViewDetails";
+import CountriesData from "../Pages/CountriesData";
 
 const router = createBrowserRouter([
     {
@@ -27,12 +29,22 @@ const router = createBrowserRouter([
                 loader: () => fetch(`https://tourism-server-beta.vercel.app/tourists`)
             },
             {
+                path: "/details/:id",
+                element: <PrivetRoute><ViewDetails></ViewDetails></PrivetRoute>,
+                loader: ({ params }) => fetch(`https://tourism-server-beta.vercel.app/single-tourists/${params.id}`),
+            },
+            {
                 path: "/addTourists",
                 element: <PrivetRoute><AddTourists></AddTourists></PrivetRoute>
             },
             {
                 path: "/myList",
                 element: <PrivetRoute><MyList></MyList></PrivetRoute>,
+                loader: () => fetch(`https://tourism-server-beta.vercel.app/tourists`)
+            },
+            {
+                path: "/countries",
+                element: <PrivetRoute><CountriesData></CountriesData></PrivetRoute>,
                 loader: () => fetch(`https://tourism-server-beta.vercel.app/tourists`)
             },
             {

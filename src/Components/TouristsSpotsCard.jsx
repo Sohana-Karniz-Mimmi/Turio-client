@@ -6,7 +6,7 @@ import { FaRegCalendarDays, FaRegClock } from 'react-icons/fa6';
 import { IoLocationOutline } from 'react-icons/io5';
 
 const TouristsSpotsCard = ({ touristsSpot }) => {
-    const { _id, touristsSpotName, countryName, averageCost, description, location, travelTime, totalVisitors, seasonality, photo } = touristsSpot;
+    const { _id, touristsSpotName, countryName, averageCost, location, travelTime, photo } = touristsSpot;
     return (
         <div>
             <div className=" max-w-sm mx-auto group rounded border-2 lg::w-[365px]">
@@ -28,7 +28,7 @@ const TouristsSpotsCard = ({ touristsSpot }) => {
                         </h2>
                     </div>
 
-                    <Link to={`/estateDetails/${_id}`} className=" w-full relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden transition-all ease-out duration-300 group-hover:bg-green-600 rounded-md">
+                    <Link to={`/details/${_id}`} className=" w-full relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden transition-all ease-out duration-300 group-hover:bg-green-600 rounded-md">
                         <span className="md:px-6 border hover:bg-green-600 group-hover:text-white duration-300 border-green-600 w-full text-center md:py-3 px-3 py-2 transition-all ease-out rounded-md  text-green-600 md:text-[16px] text-sm">View Details</span>
                     </Link>
 
