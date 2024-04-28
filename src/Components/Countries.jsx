@@ -7,6 +7,9 @@ import { useEffect, useState } from "react";
 const Countries = () => {
 
     const loadedCountriesData = useLoaderData();
+
+    console.log(loadedCountriesData);
+
     const [countriesData, setCountriesData] = useState([]);
     useEffect(() => {
         fetch(`http://localhost:5000/countries`)
@@ -25,12 +28,12 @@ const Countries = () => {
                     <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="200" className="lg:w-[550px] lg:text-[16px] md:w-[500px] text-sm  w-80 mx-auto">Dive into global exploration with Turio. Learn about diverse cultures, stunning landscapes, and unique experiences in countries worldwide.</p>
                 </div>
 
-                <Link to={`/countries`} className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 ">
+                <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 ">
 
                     {
                         countriesData.map(countries => <CountriesCard key={countries._id} countries={countries} ></CountriesCard>)
                     }
-                </Link>
+                </div>
             </div>
         </>
     );

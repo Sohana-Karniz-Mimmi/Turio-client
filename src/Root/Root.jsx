@@ -11,7 +11,6 @@ import PrivetRoute from "../PrivetRoute/PrivetRoute";
 import Update from "../Pages/Update";
 import ViewDetails from "../Pages/ViewDetails";
 import CountriesData from "../Pages/CountriesData";
-import Form from "../Components/Form";
 
 const router = createBrowserRouter([
     {
@@ -39,19 +38,14 @@ const router = createBrowserRouter([
                 element: <PrivetRoute><AddTourists></AddTourists></PrivetRoute>
             },
             {
-                path: "/form",
-                element: <PrivetRoute><Form></Form></PrivetRoute>
-            },
-            
-            {
                 path: "/myList",
                 element: <PrivetRoute><MyList></MyList></PrivetRoute>,
                 loader: () => fetch(`https://tourism-server-beta.vercel.app/tourists`)
             },
             {
-                path: "/countries",
+                path: "/countries/:countryName",
                 element: <PrivetRoute><CountriesData></CountriesData></PrivetRoute>,
-                loader: () => fetch(`https://tourism-server-beta.vercel.app/tourists`)
+                loader: ({params}) => fetch(`http://localhost:5000/countries/${params.countryName}`)
             },
             {
                 path: "/update/:id",
