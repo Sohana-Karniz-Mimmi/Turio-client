@@ -101,7 +101,7 @@ const Login = () => {
     return (
         <>
             <Helmet>
-                <title>Sing in - Master Tourist</title>
+                <title>Login - Master Tourist</title>
             </Helmet>
 
             <div>
@@ -118,7 +118,7 @@ const Login = () => {
                         <div className="md:max-w-md w-full dark:bg-white border-2 sm:px-6 p-4 rounded-lg">
                             <form onSubmit={handleSubmit(handleLoginForm)}>
                                 <div className="my-6 text-center">
-                                    <h3 className="text-3xl font-extrabold">Login</h3>
+                                    <h3 className="text-3xl font-extrabold">Login Now</h3>
                                 </div>
                                 <div>
                                     <label className="text-sm block mb-2">Email</label>
@@ -166,17 +166,18 @@ const Login = () => {
                                     </div>
                                 </div>
 
+                                {/* Button */}
                                 <div className="mt-6">
                                     <button className=" w-full relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md">
-                                        <span className="w-full h-full bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05] absolute"></span>
+                                        <span className="w-full h-full bg-green-600 absolute"></span>
                                         <span className="relative md:px-6 md:py-3 px-3 py-2 transition-all ease-out rounded-md group-hover:bg-opacity-0 duration-400">
-                                            <span className="relative text-white md:text-[16px] text-sm">Sing in</span>
+                                            <span className="relative text-white md:text-[16px] text-sm">Login</span>
                                         </span>
                                     </button>
                                 </div>
 
                                 <div className="">
-                                    <p className="text-sm mt-4 ">Don't have an account <Link to={`/register`} className="text-blue-600 font-semibold hover:underline ml-1 whitespace-nowrap">Register</Link></p>
+                                    <p className="text-sm mt-4 ">Don't have an account?<Link to={`/register`} className="text-blue-600 font-semibold hover:underline ml-1 whitespace-nowrap">Register</Link></p>
                                 </div>
                                 <p className="mb-8 mt-6 text-sm text-gray-400 text-center">or continue with</p>
 
