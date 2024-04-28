@@ -1,12 +1,28 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import AllTouristsSpotsCard from "../Components/AllTouristsSpotsCard";
+import { useState } from "react";
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 
 
 const AllTourists = () => {
-
     const loadedTouristsSpotsData = useLoaderData();
+    console.log(loadedTouristsSpotsData);
+    const [displayData, setDisplayData] = useState(loadedTouristsSpotsData);
+
+    
+
+    const sortInAscending = () => {
+        const display = loadedTouristsSpotsData.sort((a, b) => parseInt(a.averageCost) - parseInt(b.averageCost));
+        setDisplayData(display);
+    }
+    const sortInDescending = () => {
+        const display = loadedTouristsSpotsData.sort((a, b) => parseInt(b.averageCost) - parseInt(a.averageCost));
+        setDisplayData(display);
+    }
+
+    console.log(displayData);
 
     return (
         <div>
@@ -19,10 +35,23 @@ const AllTourists = () => {
                     <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="200" className="lg:w-[550px] lg:text-[16px] md:w-[500px] text-sm  w-80 mx-auto">Discover Our Newest Listings: The Latest Properties Ready to Impress and Inspire Your Next Adventure in Real Estate Excellence!</p>
                 </div>
 
+                 {/* Sort By*/}
+            <div className="text-center mt-8 mb-4">
+                <details className="dropdown">
+                    <summary className="m-1 btn bg-green-600 hover:bg-green-600 rounded-lg text-white flex items-center justify-center">Sort By
+                        <span className="text-3xl"><RiArrowDropDownLine /></span>
+                    </summary>
+                    <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+                        <li onClick={sortInAscending}><a>Ascending Order</a></li>
+                        <li onClick={sortInDescending}><a>Descending Order</a></li>
+                    </ul>
+                </details>
+            </div>
+
                 <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 ">
 
                     {
-                        loadedTouristsSpotsData.map(touristsSpot => <AllTouristsSpotsCard key={touristsSpot._id} touristsSpot={touristsSpot} ></AllTouristsSpotsCard>)
+                        displayData?.map(touristsSpot => <AllTouristsSpotsCard key={touristsSpot._id} touristsSpot={touristsSpot} ></AllTouristsSpotsCard>)
                     }
                 </div>
             </div>

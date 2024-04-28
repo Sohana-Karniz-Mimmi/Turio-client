@@ -28,7 +28,7 @@ const AllTouristsSpotsCard = ({ touristsSpot }) => {
                     <div className=" flex justify-between items-center">
                         <span className="font-bold text-lg flex items-center gap-2"><FaRegCalendarDays /> {travelTime}</span>
                         <h2 className="text-2xl font-semibold text-green-600">
-                            {averageCost}
+                           ${averageCost}
                         </h2>
                     </div>
 

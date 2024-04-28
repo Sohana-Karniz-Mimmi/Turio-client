@@ -45,7 +45,7 @@ const router = createBrowserRouter([
             {
                 path: "/countries/:countryName",
                 element: <PrivetRoute><CountriesData></CountriesData></PrivetRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/countries/${params.countryName}`)
+                loader: ({params}) => fetch(`https://tourism-server-beta.vercel.app/countries/${params.countryName}`)
             },
             {
                 path: "/update/:id",
