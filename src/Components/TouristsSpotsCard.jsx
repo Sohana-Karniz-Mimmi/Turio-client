@@ -6,14 +6,14 @@ import { FaRegCalendarDays, FaRegClock } from 'react-icons/fa6';
 import { IoLocationOutline } from 'react-icons/io5';
 
 const TouristsSpotsCard = ({ touristsSpot }) => {
-    const { _id, touristsSpotName, countryName, averageCost, location, travelTime, photo } = touristsSpot;
+    const { _id, touristsSpotName, countryName, averageCost, location, travelTime, photo, seasonality } = touristsSpot;
     return (
         <div>
             <div className=" max-w-sm mx-auto group rounded border-2 lg::w-[365px]">
 
                 <div className="overflow-hidden relative">
                     <img role="presentation" className="object-cover transition-all hover:scale-110 duration-700 ease-in-out w-full rounded h-52 bg-gray-500" src={photo || errorImage} />
-                    <h3 className="z-10 bg-green-600 text-sm font-medium text-white absolute top-4 left-4 rounded-md py-2 px-[14px] xs:text-xl md:text-sm flex items-center gap-2"> <FaRegClock /> 3 Days 4 Nights</h3>
+                    <h3 className="z-10 bg-green-600 text-sm font-medium text-white absolute top-4 left-4 rounded-md py-2 px-[14px] xs:text-xl md:text-sm flex items-center gap-2"> <FaRegClock /> {seasonality}</h3>
                 </div>
 
                 <div className="p-6 space-y-2">
