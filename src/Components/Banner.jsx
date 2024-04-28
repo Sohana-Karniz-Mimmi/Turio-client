@@ -1,6 +1,6 @@
 import slider1 from '../assets/images/Banner Slider/banner1.png'
 import slider2 from '../assets/images/Banner Slider/banner2.png'
-import slider3 from '../assets/images/Banner Slider/slider3.jpg'
+import slider3 from '../assets/images/Banner Slider/banner3.webp'
 import Navbar from './Navbar';
 
 // Swiper

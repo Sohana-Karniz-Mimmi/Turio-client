@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import './navbar.css'
-import logo from "../assets/images/logo/logo3.svg";
+import logo from "../assets/images/logo/logo1-svg.svg";
 
 const Navbar = () => {
 
@@ -75,7 +75,7 @@ const Navbar = () => {
 
 
                 {/* <img className="w-full h-full" src="" alt="" /> */}
-                <Link to={'/'} className="font-bold text-2xl flex items-center"> <img className="w-10 h-10" src={logo} alt="" /> MasterTourist </Link>
+                <Link to={'/'} className="font-bold text-2xl flex items-center"> <img className="w-28 h-10 relative" src={logo} alt="" /><span className="absolute left-32">Turio</span></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu-horizontal space-x-5 ">
