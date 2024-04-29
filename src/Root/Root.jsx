@@ -44,7 +44,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/countries/:countryName",
-                element: <PrivetRoute><CountriesData></CountriesData></PrivetRoute>,
+                element: <CountriesData></CountriesData>,
                 loader: ({params}) => fetch(`https://tourism-server-beta.vercel.app/countries/${params.countryName}`)
             },
             {

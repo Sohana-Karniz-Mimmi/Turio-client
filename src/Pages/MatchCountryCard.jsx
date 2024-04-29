@@ -26,7 +26,7 @@ const MatchCountryCard = ({ touristsSpot }) => {
                     </div>
                     <div className=" flex justify-between items-center">
                         <h2 className="text-2xl font-semibold text-green-600">
-                            {averageCost}
+                            ${averageCost}
                         </h2>
                     </div>
 

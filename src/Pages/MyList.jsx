@@ -62,7 +62,7 @@ const Users = () => {
                         {/* head */}
                         <thead className="text-center bg-gray-200 text-black">
                             <tr>
-                                <th>Name</th>
+                                <th>Tourist Spot Name</th>
                                 <th>Country</th>
                                 <th>Location</th>
                                 <th>Cost</th>
@@ -76,7 +76,7 @@ const Users = () => {
                                     <th>{tourist.touristsSpotName}</th>
                                     <td>{tourist.countryName}</td>
                                     <td>{tourist.location}</td>
-                                    <td>{tourist.averageCost}</td>
+                                    <td>${tourist.averageCost}</td>
                                     <td>
                                         <div className=" space-x-1">
                                             <Link to={`/update/${tourist._id}`} className="py-2 px-4 rounded-md join-item text-white bg-green-500">Update</Link>

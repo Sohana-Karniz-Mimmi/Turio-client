@@ -75,7 +75,7 @@ const Banner = () => {
                                 </h1>
 
                                 <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700" className="mt-4 mb-10 max-w-3xl sm:text-lg/relaxed">
-                                Sed convallis sit amet leo quis feugiat. Nunc interdum mollis facilisis. feugi Dthreec id the urna aliquet, suscipit turpis ut Dthreec id urna aliquet, suscipit turpis ut, facilisis purus.
+                                Embark on a voyage of discovery with Turio. Explore diverse landscapes, immerse in vibrant cultures, and uncover the world's wonders. Your adventure awaits!
                                 </p>
                                 <button className='border border-green-600 py-[9px] bg-green-600 transition duration-300 ease-in-out hover:bg-transparent px-6 hover:text-green-600 font-semibold'> Explore Now </button>
                             </div>
@@ -106,7 +106,7 @@ const Banner = () => {
                                 </h1>
 
                                 <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700" className="mt-4 mb-10 max-w-3xl sm:text-lg/relaxed">
-                                Sed convallis sit amet leo quis feugiat. Nunc interdum mollis facilisis. feugi Dthreec id the urna aliquet, suscipit turpis ut Dthreec id urna aliquet, suscipit turpis ut, facilisis purus.
+                                Embark on a voyage of discovery with Turio. Explore diverse landscapes, immerse in vibrant cultures, and uncover the world's wonders. Your adventure awaits!
                                 </p>
                                 <button className='border border-green-600 py-[9px] bg-green-600 transition duration-300 ease-in-out hover:bg-transparent px-6 hover:text-green-600 font-semibold'> Explore Now </button>
                             </div>

@@ -52,9 +52,9 @@ const Footer = () => {
                 <div className="">
                     <h2 className="text-white font-bold text-lg mb-2">QUICK LINKS</h2>
                     <div className="flex flex-col lg:text-start text-center space-y-4 text-[#FFFFFF99] text-sm">
-                        <Link to={`/about`} className="no-underline hover:underline cursor-pointer">Tour Guide</Link>
+                        <Link className="no-underline hover:underline cursor-pointer">Tour Guide</Link>
 
-                        <Link to={`/locations`} className="no-underline cursor-pointer hover:underline">Contact Us</Link>
+                        <Link className="no-underline cursor-pointer hover:underline">Contact Us</Link>
                         <Link to={`/`} className="no-underline cursor-pointer hover:underline">Support Center</Link>
                         <Link to={`/`} className="no-underline cursor-pointer hover:underline">Terms Conditions</Link>
 

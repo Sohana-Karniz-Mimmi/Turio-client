@@ -17,7 +17,7 @@ const TouristsSpots = () => {
             <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 ">
 
                 {
-                    loadedTouristsSpotsData.map(touristsSpot => <TouristsSpotsCard key={touristsSpot._id} touristsSpot={touristsSpot} ></TouristsSpotsCard>)
+                    loadedTouristsSpotsData.slice(0, 6).map(touristsSpot => <TouristsSpotsCard key={touristsSpot._id} touristsSpot={touristsSpot} ></TouristsSpotsCard>)
                 }
             </div>
             <div className="text-center">

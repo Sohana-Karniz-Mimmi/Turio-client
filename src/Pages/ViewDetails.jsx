@@ -71,7 +71,7 @@ const ViewDetails = () => {
                                                     <span className="font-bold">Average Cost</span>
                                                 </td>
                                                 <td className="p-3">
-                                                    <p>{averageCost}</p>
+                                                    <p>${averageCost}</p>
                                                 </td>
                                             </tr>
                                             <tr className=" dark:bg-gray-50">
