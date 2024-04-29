@@ -10,10 +10,10 @@ const AllTouristsSpotsCard = ({ touristsSpot }) => {
     const { _id, touristsSpotName, countryName, totalVisitors, averageCost, location, travelTime, photo, seasonality } = touristsSpot;
     return (
         <div>
-            <div className=" max-w-sm mx-auto group rounded border-2 lg::w-[365px]">
+            <div className="barlow-regular max-w-sm mx-auto group rounded border-2 lg::w-[365px]">
 
                 <div className="overflow-hidden relative">
-                    <img role="presentation" className="object-cover transition-all hover:scale-110 duration-700 ease-in-out w-full rounded h-52 bg-gray-500" src={photo || errorImage} />
+                    <img role="presentation" className="object-cover transition-all group-hover:scale-110 duration-700 ease-in-out w-full rounded h-52 bg-gray-500" src={photo || errorImage} />
                 </div>
 
                 <div className="p-6 space-y-2 relative">
@@ -23,10 +23,10 @@ const AllTouristsSpotsCard = ({ touristsSpot }) => {
                 </div>
                     <h3 className="text-2xl font-semibold ">{touristsSpotName}</h3>
                     <div className="flex justify-between">
-                        <span className="text-gray-700 flex items-center gap-2"><IoLocationOutline /> {countryName}, {location}</span>
+                        <span className="text-[#9ca3a9] font-medium flex items-center gap-2"><IoLocationOutline /> {countryName}, {location}</span>
                     </div>
-                    <div className="text-gray-700">
-                        <p className='flex items-center gap-2'><HiOutlineUserGroup /> Total Visitor Per Year <span className='font-semibold'>{totalVisitors}</span></p>
+                    <div className="text-[#9ca3a9] font-medium">
+                        <p className='flex items-center gap-2'><HiOutlineUserGroup /> Total Visitor Per Year <span className='font-bold'>{totalVisitors}</span></p>
                     </div>
                     <div className=" flex justify-between items-center">
                         <span className="font-bold text-lg flex items-center gap-2"><FaRegCalendarDays /> {travelTime}</span>
