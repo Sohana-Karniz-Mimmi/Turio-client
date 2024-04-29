@@ -9,7 +9,7 @@ const TouristsSpotsCard = ({ touristsSpot }) => {
     const { _id, touristsSpotName, countryName, averageCost, location, travelTime, photo, seasonality } = touristsSpot;
     return (
         <div>
-            <div className=" max-w-sm mx-auto group rounded border-2 lg::w-[365px]">
+            <div className="barlow-regular w-full mx-auto group rounded border-2 lg::w-[365px]">
 
                 <div className="overflow-hidden relative">
                     <img role="presentation" className="object-cover transition-all hover:scale-110 duration-700 ease-in-out w-full rounded h-52 bg-gray-500" src={photo || errorImage} />
@@ -17,14 +17,14 @@ const TouristsSpotsCard = ({ touristsSpot }) => {
                 </div>
 
                 <div className="p-6 space-y-2">
-                    <h3 className="text-2xl font-semibold ">{touristsSpotName}</h3>
+                    <h3 className="text-2xl  font-semibold  ">{touristsSpotName}</h3>
                     <div className="flex justify-between">
-                        <span className="text-gray-700 flex items-center gap-2"><IoLocationOutline /> {countryName}, {location}</span>
+                        <span className="text-[#9ca3a9] font-medium flex items-center gap-2"><IoLocationOutline /> {countryName}, {location}</span>
                     </div>
                     <div className=" flex justify-between items-center">
                         <span className="font-bold text-lg flex items-center gap-2"><FaRegCalendarDays /> {travelTime}</span>
-                        <h2 className="text-2xl font-semibold text-green-600">
-                            {averageCost}
+                        <h2 className="text-[#FF0143] font-semibold text-2xl">
+                            ${averageCost}
                         </h2>
                     </div>
 

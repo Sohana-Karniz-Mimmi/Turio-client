@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import './navbar.css'
-import logo from "../assets/images/logo/logo1-svg.svg";
+import logo from "../assets/images/logo/logo3.png";
 
 const Navbar = () => {
 
@@ -75,7 +75,7 @@ const Navbar = () => {
 
     return (
 
-        <div className="navbar p-0 md:py-3 py-5 container mx-auto md:px-10 px-1">
+        <div className="barlow-regular navbar p-0 md:py-3 py-5 container mx-auto md:px-10 px-1">
             <div className="navbar-start">
 
                 <details className="dropdown">
@@ -92,7 +92,7 @@ const Navbar = () => {
 
 
                 {/* <img className="w-full h-full" src="" alt="" /> */}
-                <Link to={'/'} className="font-bold text-2xl flex items-center"> <img className="w-28 h-10 relative" src={logo} alt="" /><span className="absolute left-32">Turio</span></Link>
+                <Link to={'/'} className="font-bold text-2xl gap-3 flex items-center"> <img className="w-12 h-10 relative" src={logo} alt="" /><span className="">Turio</span></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu-horizontal space-x-5 ">

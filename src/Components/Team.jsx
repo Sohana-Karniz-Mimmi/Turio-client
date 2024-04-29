@@ -7,17 +7,17 @@ const Team = () => {
     return (
         <div>
             {/* <!-- ====== Team Section Start --> */}
-            <section className="pt-20 pb-10 lg:pt-20 lg:pb-20 dark:bg-dark">
+            <section className="barlow-condensed-regular pt-20 pb-10 lg:pt-20 lg:pb-20 dark:bg-dark">
                 <div className="container mx-auto">
                     <div className="-mx-4 flex flex-wrap">
                         <div className="w-full px-4">
                             <div className="mx-auto mb-[60px] max-w-[510px] text-center">
                                 <h2 data-aos="fade-up" data-aos-duration="1000"
-                                    className="mb-3 text-3xl leading-[1.2] font-bold sm:text-4xl md:text-[40px]"
+                                    className="mb-3 text-3xl leading-[1.2] sm:text-4xl md:text-[44px]  font-semibold"
                                 >
                                     Tour Guide
                                 </h2>
-                                <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" className="text-body-color">Expert guidance awaits with Turio. Discover insider tips, local secrets, and personalized recommendations for your dream travel experience.
+                                <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" className="text-body-color lg:text-lg text-[#9ca3a9] font-medium">Expert guidance awaits with Turio. Discover insider tips, local secrets, and personalized recommendations for your dream travel experience.
                                 </p>
                             </div>
                         </div>
@@ -34,10 +34,10 @@ const Team = () => {
                                         <div
                                             className="relative mx-5 overflow-hidden rounded-lg bg-white dark:bg-dark-2 py-5 px-3"
                                         >
-                                            <h3 className="text-dark dark:text-black text-base font-semibold">
+                                            <h3 className="text-dark dark:text-black font-semibold text-xl">
                                                 Sohana Sheikh
                                             </h3>
-                                            <p className="text-body-color dark:text-[#909397] text-xs">Tour Guide</p>
+                                            <p className="text-body-color dark:text-[#909397] text-sm">Web Developer</p>
                                             <div>
                                                 <span className="absolute left-0 bottom-0">
                                                     <svg
@@ -224,10 +224,10 @@ const Team = () => {
                                         <div
                                             className="relative mx-5 overflow-hidden rounded-lg bg-white dark:bg-dark-2 py-5 px-3"
                                         >
-                                            <h3 className="text-dark dark:text-black text-base font-semibold">
+                                            <h3 className="text-dark dark:text-black text-xl font-semibold">
                                                 Soharab Hasan
                                             </h3>
-                                            <p className="text-body-color dark:text-[#909397] text-xs">Tour Guide</p>
+                                            <p className="text-body-color dark:text-[#909397] text-smsss">Chief Executive Officer</p>
                                             <div>
                                                 <span className="absolute left-0 bottom-0">
                                                     <svg
@@ -414,10 +414,10 @@ const Team = () => {
                                         <div
                                             className="relative mx-5 overflow-hidden rounded-lg bg-white dark:bg-dark-2 py-5 px-3"
                                         >
-                                            <h3 className="text-dark dark:text-black text-base font-semibold">
+                                            <h3 className="text-dark dark:text-black font-semibold text-xl">
                                                 Jane Suttherland
                                             </h3>
-                                            <p className="text-body-color dark:text-[#909397] text-xs">Tour Guide</p>
+                                            <p className="text-body-color dark:text-[#909397] text-sm">Tour Guide</p>
                                             <div>
                                                 <span className="absolute left-0 bottom-0">
                                                     <svg
@@ -604,10 +604,10 @@ const Team = () => {
                                         <div
                                             className="relative mx-5 overflow-hidden rounded-lg bg-white dark:bg-dark-2 py-5 px-3"
                                         >
-                                            <h3 className="text-dark dark:text-black text-base font-semibold">
+                                            <h3 className="text-dark dark:text-black text-base font-semibold text-xl">
                                                 Nikolas Brooten
                                             </h3>
-                                            <p className="text-body-color dark:text-[#909397] text-xs">Tour Guide Manager</p>
+                                            <p className="text-body-color dark:text-[#909397] text-sm">Tour Guide Manager</p>
                                             <div>
                                                 <span className="absolute left-0 bottom-0">
                                                     <svg
