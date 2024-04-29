@@ -54,29 +54,29 @@ const Update = () => {
             <div>
                 <Navbar></Navbar>
             </div>
-            <section className="p-6 dark:text-gray-900">
+            <section className="p-6 barlow-condensed-regular dark:text-gray-900">
 
                 <form onSubmit={handleSubmit(handleUpdateForm)} className="container mx-auto flex justify-center space-y-12">
                 <fieldset className=" py-10 md:px-16 px-5 rounded-md shadow-sm dark:bg-white border-2 mt-5">
                         <div className="mb-6 text-center">
-                            <h3 className="md:text-3xl text-2xl font-extrabold">Update Tourists Spot</h3>
+                            <h3 className="md:text-4xl text-2xl font-extrabold">Update Tourists Spot</h3>
                         </div>
-                        <div className=" md:w-[680px] w-full grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
+                        <div className=" md:w-[680px] w-[300px] grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
 
 
                             {/* First Row  */}
                             <div className="col-span-full sm:col-span-3">
-                                <label className="text-sm block mb-2">Tourists Spot Name</label>
+                                <label className="text-base block mb-2">Tourists Spot Name</label>
                                 <div className="relative">
-                                    <input {...register("touristsSpotName", { required: true })} name="touristsSpotName" defaultValue={touristsSpotName} required type="text" className="w-full text-sm border rounded-lg border-gray-300 focus:border-[#333] px-2 py-2 outline-none bg-transparent" placeholder="Enter as Tourists Spot Name" />
+                                    <input {...register("touristsSpotName", { required: true })} name="touristsSpotName" defaultValue={touristsSpotName} required type="text" className="w-full text-base border rounded-lg border-gray-300 focus:border-[#333] px-2 py-2 outline-none bg-transparent" placeholder="Enter as Tourists Spot Name" />
                                     {/* {errors.touristsSpotName && <span className="text-red-600">Please Enter a Tourists Spot Name</span>} */}
 
                                 </div>
                             </div>
                             <div className="col-span-full sm:col-span-3">
-                                <label className="text-sm block mb-2">Country Name</label>
+                                <label className="text-base block mb-2">Country Name</label>
                                 <div className="relative">
-                                    <select {...register("countryName", { required: true })} name="countryName" type="text" defaultValue={countryName} required className="w-full text-sm border rounded-lg border-gray-300 focus:border-[#333] px-2 py-2 outline-none bg-transparent">
+                                    <select {...register("countryName", { required: true })} name="countryName" type="text" defaultValue={countryName} required className="w-full text-base border rounded-lg border-gray-300 focus:border-[#333] px-2 py-2 outline-none bg-transparent">
                                         <option value="">Select Country...</option>
                                         <option value="Bangladesh">Bangladesh</option>
                                         <option value="Thailand">Thailand</option>
@@ -92,17 +92,17 @@ const Update = () => {
 
                             {/* 2nd Row  */}
                             <div className="col-span-full sm:col-span-3">
-                                <label className="text-sm block mb-2">Location</label>
+                                <label className="text-base block mb-2">Location</label>
                                 <div className="relative">
-                                    <input {...register("location", { required: true })} defaultValue={location} name="location" type="text" required className="w-full text-sm border rounded-lg border-gray-300 focus:border-[#333] px-2 py-2 outline-none bg-transparent" placeholder="Enter Your Photo URL" />
+                                    <input {...register("location", { required: true })} defaultValue={location} name="location" type="text" required className="w-full text-base border rounded-lg border-gray-300 focus:border-[#333] px-2 py-2 outline-none bg-transparent" placeholder="Enter Your Photo URL" />
                                     {/* {errors.location && <span className="text-red-600">Please Enter Your location</span>} */}
 
                                 </div>
                             </div>
                             <div className="col-span-full sm:col-span-3">
-                                <label className="text-sm block mb-2">Photo URL</label>
+                                <label className="text-base block mb-2">Photo URL</label>
                                 <div className="relative">
-                                    <input {...register("photo", { required: true })} defaultValue={photo} name="photo" required type="text" className="w-full text-sm border rounded-lg border-gray-300 focus:border-[#333] px-2 py-2 outline-none bg-transparent" placeholder="Enter Your Photo URL" />
+                                    <input {...register("photo", { required: true })} defaultValue={photo} name="photo" required type="text" className="w-full text-base border rounded-lg border-gray-300 focus:border-[#333] px-2 py-2 outline-none bg-transparent" placeholder="Enter Your Photo URL" />
                                     {/* {errors.photo && <span className="text-red-600">Please Enter Your Photo URL</span>} */}
 
                                 </div>
@@ -111,17 +111,17 @@ const Update = () => {
                             {/* 3rd Row  */}
 
                             <div className="col-span-full sm:col-span-3">
-                                <label className="text-sm block mb-2">Average Cost</label>
+                                <label className="text-base block mb-2">Average Cost</label>
                                 <div className="relative">
-                                    <input {...register("averageCost", { required: true })} defaultValue={averageCost} name="averageCost" type="text" required className="w-full text-sm border rounded-lg border-gray-300 focus:border-[#333] px-2 py-2 outline-none bg-transparent" placeholder="Enter Average Cost" />
+                                    <input {...register("averageCost", { required: true })} defaultValue={averageCost} name="averageCost" type="text" required className="w-full text-base border rounded-lg border-gray-300 focus:border-[#333] px-2 py-2 outline-none bg-transparent" placeholder="Enter Average Cost" />
                                     {/* {errors.averageCost && <span className="text-red-600">Please Enter Your Photo URL</span>} */}
 
                                 </div>
                             </div>
                             <div className="col-span-full sm:col-span-3">
-                                <label className="text-sm block mb-2">Seasonality</label>
+                                <label className="text-base block mb-2">Seasonality</label>
                                 <div className="relative">
-                                    <select {...register("seasonality", { required: true })} defaultValue={seasonality} type="text" required className="w-full text-sm border rounded-lg border-gray-300 focus:border-[#333] px-2 py-2 outline-none bg-transparent">
+                                    <select {...register("seasonality", { required: true })} defaultValue={seasonality} type="text" required className="w-full text-base border rounded-lg border-gray-300 focus:border-[#333] px-2 py-2 outline-none bg-transparent">
                                         <option value="">Select Season...</option>
                                         <option value="Summer ">Summer </option>
                                         <option value="Rainy ">Rainy </option>
@@ -137,17 +137,17 @@ const Update = () => {
 
                             {/* last Row  */}
                             <div className="col-span-full sm:col-span-3">
-                                <label className="text-sm block mb-2">Travel Time</label>
+                                <label className="text-base block mb-2">Travel Time</label>
                                 <div className="travelTime">
-                                    <input {...register("travelTime", { required: true })} defaultValue={travelTime} name="travelTime" type="text" required className="w-full text-sm border rounded-lg border-gray-300 focus:border-[#333] px-2 py-2 outline-none bg-transparent" placeholder="Enter Your Photo URL" />
+                                    <input {...register("travelTime", { required: true })} defaultValue={travelTime} name="travelTime" type="text" required className="w-full text-base border rounded-lg border-gray-300 focus:border-[#333] px-2 py-2 outline-none bg-transparent" placeholder="Enter Your Photo URL" />
                                     {/* {errors.travelTime && <span className="text-red-600">Please Enter Your Photo URL</span>} */}
 
                                 </div>
                             </div>
                             <div className="col-span-full sm:col-span-3">
-                                <label className="text-sm block mb-2">Total Visitors Per Year</label>
+                                <label className="text-base block mb-2">Total Visitors Per Year</label>
                                 <div className="relative">
-                                    <input {...register("totalVisitors", { required: true })} defaultValue={totalVisitors} name="totalVisitors" type="text" required className="w-full text-sm border rounded-lg border-gray-300 focus:border-[#333] px-2 py-2 outline-none bg-transparent" placeholder="Enter Your Photo URL" />
+                                    <input {...register("totalVisitors", { required: true })} defaultValue={totalVisitors} name="totalVisitors" type="text" required className="w-full text-base border rounded-lg border-gray-300 focus:border-[#333] px-2 py-2 outline-none bg-transparent" placeholder="Enter Your Photo URL" />
                                     {/* {errors.totalVisitors && <span className="text-red-600">Please Enter Your Photo URL</span>} */}
 
                                 </div>
@@ -156,15 +156,15 @@ const Update = () => {
 
                             {/* description */}
                             <div className="col-span-full">
-                                <label className="text-sm block mb-2">Description</label>
+                                <label className="text-base block mb-2">Description</label>
                                 <div className="relative">
-                                    <textarea {...register("description", { required: true })} defaultValue={description} name="description" type="text" cols="10" rows="2" placeholder="Write a short description..." className="w-full text-sm border rounded-lg border-gray-300 focus:border-[#333] px-2 py-2 outline-none bg-transparent"></textarea>
+                                    <textarea {...register("description", { required: true })} defaultValue={description} name="description" type="text" cols="10" rows="2" placeholder="Write a short description..." className="w-full text-base border rounded-lg border-gray-300 focus:border-[#333] px-2 py-2 outline-none bg-transparent"></textarea>
 
                                 </div>
                             </div>
                             {/* Btn */}
                             <div className="col-span-full">
-                                <input type="submit" value='Update Tourists Spot' className="w-full p-2 rounded-md btn bg-green-600 hover:bg-green-600 text-white" />
+                                <input type="submit" value='Update Tourists Spot' className="w-full p-2 text-lg rounded-md btn bg-green-600 hover:bg-green-600 text-white" />
                             </div>
                         </div>
                     </fieldset>

@@ -55,12 +55,12 @@ const Users = () => {
                 <Navbar></Navbar>
             </div>
 
-            <div className="w-[900px] py-10 mx-auto border border-1 rounded-lg mt-10">
-                <h2 className="text-2xl font-bold text-center pb-5">My List</h2>
+            <div className="barlow-condensed-regular w-[900px] py-10 mx-auto border border-1 rounded-lg mt-10">
+                <h2 className="text-2xl md:text-4xl font-bold text-center pb-5">My List</h2>
                 <div className="overflow-x-auto">
                     <table className="table">
                         {/* head */}
-                        <thead className="text-center bg-gray-200 text-black">
+                        <thead className="text-center text-base bg-gray-200 text-black">
                             <tr>
                                 <th>Tourist Spot Name</th>
                                 <th>Country</th>
@@ -69,7 +69,7 @@ const Users = () => {
                                 <th>Actions</th>
                             </tr>
                         </thead>
-                        <tbody className="text-center">
+                        <tbody className="text-center text-base">
                             {/* row 1 */}
                             {
                                 touristList.map((tourist) => <tr key={tourist._id} className="">

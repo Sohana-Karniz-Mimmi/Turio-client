@@ -1,9 +1,9 @@
 import { MdEmail } from "react-icons/md";
 import { IoCall, IoLocationOutline } from "react-icons/io5";
-import { FaBuilding, FaGithub, FaLinkedin } from "react-icons/fa";
+import {  FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaSquareFacebook, FaSquareTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import logo from "../assets/images/logo/logo1-svg.svg"
+import logo from "../assets/images/logo/logo2.png"
 
 const Footer = () => {
     return (
@@ -14,7 +14,7 @@ const Footer = () => {
                 {/* <!-- item1 --> */}
                 <div className=" md:w-[300px] lg:text-start text-center">
                     <h3 className="text-white font-bold text-lg">
-                        <Link to={'/'} className="font-bold text-2xl flex items-center"> <img className="w-28 h-10 relative" src={logo} alt="" /><span className="absolute left-[152px]">Turio</span></Link>
+                        <Link to={'/'} className="font-bold text-2xl gap-3 flex items-center"> <img className="w-12 h-10 relative" src={logo} alt="" /><span className="">Turio</span></Link>
                     </h3>
                     <p className="text-[#FFFFFF99] mt-4 pb-6">Discover your next adventure with Turio. Explore breathtaking destinations, find hidden gems, and create unforgettable memories. Your journey starts here. </p>
 
