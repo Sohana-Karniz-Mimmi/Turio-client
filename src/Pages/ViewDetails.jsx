@@ -24,7 +24,7 @@ const ViewDetails = () => {
                 <Navbar></Navbar>
             </div>
 
-            <div className="barlow-condensed-regular lg:flex gap-6 justify-between container mx-auto md:px-10 px-1 mb-10">
+            <div className="barlow-condensed-regular md:mt-2 lg:flex gap-6 justify-between container mx-auto md:px-10 px-1 mb-10">
                 <div className="relative">
                     <div className=" border-b pb-6 flex justify-between items-end mb-4">
                         <div className="space-y-2">
