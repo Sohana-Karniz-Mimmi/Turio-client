@@ -101,7 +101,7 @@ const Login = () => {
     return (
         <>
             <Helmet>
-                <title>Login - Master Tourist</title>
+                <title>Login - Turio</title>
             </Helmet>
 
             <div>

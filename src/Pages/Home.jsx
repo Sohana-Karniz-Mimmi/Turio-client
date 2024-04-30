@@ -1,14 +1,17 @@
-import { RiSendPlaneFill } from "react-icons/ri";
 import Banner from "../Components/Banner";
 import TouristsSpots from "../Components/TouristsSpots";
 import contact from "../assets/images/update-bg.png"
 import Team from "../Components/Team";
 import Countries from "../Components/Countries";
 import PopularSpot from "../Components/PopularSpot";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
     return (
         <div>
+            <Helmet>
+                <title>Turio - Home</title>
+            </Helmet>
             <Banner></Banner>
             <TouristsSpots></TouristsSpots>
             <Countries></Countries>

@@ -3,6 +3,7 @@ import Navbar from "../Components/Navbar";
 import AllTouristsSpotsCard from "../Components/AllTouristsSpotsCard";
 import { useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -29,6 +30,9 @@ const AllTourists = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>All Tourist Spot - Turio</title>
+            </Helmet>
             <div>
                 <Navbar></Navbar>
             </div>

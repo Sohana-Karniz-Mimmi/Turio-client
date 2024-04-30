@@ -5,6 +5,7 @@ import Swal from 'sweetalert2';
 import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import Navbar from "../Components/Navbar";
+import { Helmet } from "react-helmet-async";
 
 const Users = () => {
 
@@ -51,6 +52,9 @@ const Users = () => {
     return (
 
         <>
+        <Helmet>
+                <title>My List - Turio</title>
+            </Helmet>
             <div>
                 <Navbar></Navbar>
             </div>

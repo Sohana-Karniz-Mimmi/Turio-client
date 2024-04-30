@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useContext } from 'react';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import Navbar from '../Components/Navbar';
+import { Helmet } from 'react-helmet-async';
 
 const AddTourists = () => {
 
@@ -48,6 +49,9 @@ const AddTourists = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Add Tourist Spot - Turio</title>
+            </Helmet>
             <div>
                 <Navbar></Navbar>
             </div>

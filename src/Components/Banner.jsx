@@ -10,7 +10,7 @@ import "swiper/css/bundle";
 import 'swiper/css/effect-fade';
 import { Navigation, Autoplay, EffectFade } from 'swiper/modules';
 import { Typewriter } from 'react-simple-typewriter'
-import { Fade, FadeUp , Zoom, Rotate, Flip, Roll } from 'react-awesome-reveal';
+import { Fade } from 'react-awesome-reveal';
 
 
 
@@ -139,9 +139,9 @@ const Banner = () => {
                                         delaySpeed={2000}
                                     /></p>
                                 <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" className="text-3xl font-bold sm:text-7xl">
-                                <FadeUp triggerOnce={true} duration={2000}>
+                                <Fade triggerOnce={true} duration={2000}>
                                     <div>Enjoy Your New Adventure</div>
-                                </FadeUp>
+                                </Fade>
                                 </h1>
 
                                 <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700" className="mt-4 mb-10 max-w-3xl sm:text-lg/relaxed">

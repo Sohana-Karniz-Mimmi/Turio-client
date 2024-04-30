@@ -8,7 +8,7 @@ const MatchCountryCard = ({ touristsSpot }) => {
     const { _id, touristsSpotName, countryName, averageCost, location, photo, seasonality, description } = touristsSpot;
     return (
         <div>
-            <div className=" w-full mx-auto group rounded border-2 lg::w-[365px]">
+            <div className="barlow-regular w-full mx-auto group rounded border-2 lg::w-[365px]">
 
                 <div className="overflow-hidden relative">
                     <img role="presentation" className="object-cover transition-all hover:scale-110 duration-700 ease-in-out w-full rounded h-52 bg-gray-500" src={photo || errorImage} />

@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import { useEffect, useState } from "react";
 import MatchCountryCard from "./MatchCountryCard";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -26,12 +27,16 @@ const CountriesData = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>{countryName} All Tourist Sport - Turio</title>
+            </Helmet>
             <div>
                 <Navbar></Navbar>
             </div>
-            <div className="mt-12 mb-10 md:mt-18 container max-w-6xl mx-auto space-y-6 sm:space-y-12">
+            <div className="barlow-condensed-regular mt-12 mb-10 md:mt-18 container max-w-6xl mx-auto space-y-6 sm:space-y-12">
                 <div className="text-center mb-12">
-                    <h2 data-aos="fade-down" data-aos-duration="1000" className="font-semibold text-3xl lg:text-[40px] lg:mb-4 mb-2"> Tourist Spot In {countryName}</h2>
+                    <h2 data-aos="fade-down" data-aos-duration="1000" className="font-semibold text-3xl lg:text-[44px] lg:mb-4 mb-2"> Tourist Spot In {countryName}</h2>
+                    
                     
                 </div>
 

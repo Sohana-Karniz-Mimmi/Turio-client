@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import Navbar from "../Components/Navbar";
-import image from "../assets/images/Banner Slider/banner1.png"
+import { Helmet } from "react-helmet-async";
 
 
 const ViewDetails = () => {
@@ -8,13 +8,16 @@ const ViewDetails = () => {
     const loadedDetailsData = useLoaderData()
     // console.log(loadedUpdateData);
 
-    const { _id, touristsSpotName, countryName, averageCost, description, location, travelTime, totalVisitors, seasonality, photo } = loadedDetailsData
+    const { touristsSpotName, countryName, averageCost, description, location, travelTime, totalVisitors, seasonality, photo } = loadedDetailsData
 
 
 
 
     return (
         <div className="">
+            <Helmet>
+                <title>{touristsSpotName} - Turio</title>
+            </Helmet>
             <div>
                 <Navbar></Navbar>
             </div>

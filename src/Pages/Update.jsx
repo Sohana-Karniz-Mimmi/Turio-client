@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import { useLoaderData } from 'react-router-dom';
 import Navbar from '../Components/Navbar';
+import { Helmet } from 'react-helmet-async';
 
 const Update = () => {
 
@@ -51,6 +52,9 @@ const Update = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Update Tourist Spot - Turio</title>
+            </Helmet>
             <div>
                 <Navbar></Navbar>
             </div>

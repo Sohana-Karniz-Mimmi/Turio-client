@@ -119,7 +119,7 @@ const Register = () => {
     return (
         <>
             <Helmet>
-                <title>Sing Up - Master Tourist</title>
+                <title>Register - Turio</title>
             </Helmet>
 
             <div>
