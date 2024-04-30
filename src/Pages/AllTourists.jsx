@@ -1,7 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import AllTouristsSpotsCard from "../Components/AllTouristsSpotsCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { Helmet } from "react-helmet-async";
 
@@ -26,7 +26,29 @@ const AllTourists = () => {
         setDisplayData(loadedTouristsSpotsData);
     }
 
-    console.log(displayData);
+    // console.log(displayData);
+
+    const [loading, setLoading] = useState(true);
+
+  
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 300);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+        <div className="flex items-center justify-center space-x-2 h-screen">
+        <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin dark:border-green-600">
+
+        </div>
+    </div>
+    );
+  }
+
 
     return (
         <div>

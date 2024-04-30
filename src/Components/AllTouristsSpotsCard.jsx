@@ -8,6 +8,7 @@ import { HiOutlineUserGroup } from 'react-icons/hi';
 
 const AllTouristsSpotsCard = ({ touristsSpot }) => {
     const { _id, touristsSpotName, countryName, totalVisitors, averageCost, location, travelTime, photo, seasonality } = touristsSpot;
+    
     return (
         <div>
             <div className="barlow-regular max-w-sm mx-auto group rounded border-2 lg::w-[365px]">
