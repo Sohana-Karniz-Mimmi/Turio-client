@@ -12,7 +12,7 @@ const Navbar = () => {
       });
     
       const handleToggle = (e) => {
-        setTheme((prevTheme) => (prevTheme === 'light' ? 'black' : 'light'));
+        setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
       };
     
       useEffect(() => {
