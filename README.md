@@ -18,26 +18,50 @@ Visit the live site [Turio](https://master-tourist-59394.web.app)
 - **Authentication**: Firebase
 
 ## How to Clone and Run Locally
+
+### Frontend
 1. **Clone the repository**:
    ```sh
    git clone https://github.com/Sohana-Karniz-Mimmi/Turio-client.git
 
-2. **Navigate to project directory**:
+2. **Navigate to frontend directory**:
    ```sh
-   cd turio
-3. **Install dependencies**:
+   cd Turio/frontend
+
+3. **Install frontend dependencies**:
    ```sh
    npm install
 
 4. **Set up environment variables**:
-   - Create a .env file in the root directory.  
-   - Add Firebase config keys and MongoDB credentials.
+   - Create a .env file in the root of frontend directory. 
+   - Add necessary Firebase config keys.
 
 5. **Start the development server**:
    ```sh
    npm run dev
 
-6. **Access the website**:
+6. **Access the frontend website**:
    - Open your browser and go to http://localhost:5000.
+
+### Backend
+1. **Navigate to backend directory**:
+   ```sh
+   cd turio/backend
+
+2. **Install backend dependencies**:
+   ```sh
+   npm install
+
+3. **Set up environment variables**:  
+   - Create a .env file in the root of backend directory..  
+   - Add MongoDB credentials and any other necessary configurations.
+
+4. **Access the backend API**:
+   ```sh
+   npm start
+
+
+5. **Access the frontend website**:
+   - Open your browser and go to http://localhost:8000.
 
 
