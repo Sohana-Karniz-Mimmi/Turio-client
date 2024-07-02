@@ -1,5 +1,7 @@
 # Turio
 
+Visit the live site [Turio](https://master-tourist-59394.web.app)
+
 ## Project Overview
 - **Concept**: Turio is a tourism management website focusing on providing detailed information about tourist spots in specific countries.
 - **Problem Solved**: Helps travelers find comprehensive details about various tourist spots, making trip planning easier and more informed.
@@ -18,4 +20,24 @@
 ## How to Clone and Run Locally
 1. **Clone the repository**:
    ```sh
-   git clone https://github.com/your-username/turio.git
+   git clone https://github.com/Sohana-Karniz-Mimmi/Turio-client.git
+
+2. **Navigate to project directory**:
+   ```sh
+   cd turio
+3. **Install dependencies**:
+   ```sh
+   npm install
+
+4. **Set up environment variables**:
+   - Create a .env file in the root directory.  
+   - Add Firebase config keys and MongoDB credentials.
+
+5. **Start the development server**:
+   ```sh
+   npm run dev
+
+6. **Access the website**:
+   - Open your browser and go to http://localhost:5000.
+
+
