@@ -28,12 +28,12 @@ Visit the live site [Turio](https://master-tourist-59394.web.app)
    ```sh
    cd Turio/frontend
 
-3. **Install frontend dependencies**:
+3. **Install dependencies**:
    ```sh
    npm install
 
 4. **Set up environment variables**:
-   - Create a .env file in the root of frontend directory. 
+   - Create a .env file in the frontend directory. 
    - Add necessary Firebase config keys.
 
 5. **Start the development server**:
@@ -48,12 +48,12 @@ Visit the live site [Turio](https://master-tourist-59394.web.app)
    ```sh
    cd turio/backend
 
-2. **Install backend dependencies**:
+2. **Install dependencies**:
    ```sh
    npm install
 
 3. **Set up environment variables**:  
-   - Create a .env file in the root of backend directory..  
+   - Create a .env file in the  backend directory..  
    - Add MongoDB credentials and any other necessary configurations.
 
 4. **Access the backend API**:
