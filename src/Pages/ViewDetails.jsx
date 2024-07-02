@@ -12,9 +12,6 @@ const ViewDetails = () => {
 
     const { touristsSpotName, countryName, averageCost, description, location, travelTime, totalVisitors, seasonality, photo } = loadedDetailsData
 
-
-
-
     return (
         <div className="">
             <Helmet>
@@ -53,8 +50,7 @@ const ViewDetails = () => {
                         <h3 className="z-10 group-hover:bg-white bg-[#00000050] text-sm font-medium text-white absolute top-4 right-5 rounded-full py-2 px-2 xs:text-xl md:text-sm flex items-center gap-2"> <FaHeart className="group-hover:text-[#FF0143]" /></h3>
                     </div>
 
-                    {/* Details */}
-
+                    {/* description */}
                     <div className="p-6 rounded-lg border my-8" >
                         <h2 className="text-black md:text-3xl text-xl font-medium">Description</h2>
                         <div className=" pb-4 pt-3 flex justify-between items-center font-medium text-[#9ca3a9]">

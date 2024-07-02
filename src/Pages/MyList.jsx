@@ -61,7 +61,7 @@ const Users = () => {
 
             <div className="barlow-condensed-regular w-[900px] py-10 mx-auto border border-1 rounded-lg mt-10">
                 <h2 className="text-2xl md:text-4xl font-bold text-center pb-5">My List</h2>
-                <div className="overflow-x-auto">
+                <div className="overflow-x-auto table-responsive">
                     <table className="table">
                         {/* head */}
                         <thead className="text-center text-base bg-gray-200 text-black">

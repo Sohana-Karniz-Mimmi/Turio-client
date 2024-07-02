@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet-async";
 
 
 const AllTourists = () => {
+    
     const loadedTouristsSpotsData = useLoaderData();
     console.log(loadedTouristsSpotsData);
     const [displayData, setDisplayData] = useState(loadedTouristsSpotsData);
